@@ -1,13 +1,16 @@
 #!/usr/bin/python3
-from os import *
 
-print("Where would you like to go?")
-switcher = {
-	1: "Google",
-	2: "Yahoo",
-	3: "Quora",
-	4: "Reddit"
+urllist = {
+	"google": "https://google.com",
+	"twitter": "https://twitter.com",
+	"quora": "https://quora.com",
+	"reddit": "https://reddit.com",
+	"udemy": "https://udemy.com",
+	"linkedin": "https://linkedin.com",
+	"ebenefits": "https://www.ebenefits.va.gov/ebenefits/homepage" 
 }
-print(switcher.get("Choose a number"))
-x = input("Type the number here: ")
-print("You typed " + x)
+
+def returnUrl(urlName):
+	for k,v in urllist.items():
+		if(urlName == k):
+			return(v)  
