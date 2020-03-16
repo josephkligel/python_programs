@@ -1,7 +1,7 @@
 # Python-Programs
 Programs made in Python while I was learning the language.
 
-##Table of Contents
+## Table of Contents
 ref.py Choose what reference text to edit and open it
 
 toc.py Choose what table-of-contents text to edit and open it

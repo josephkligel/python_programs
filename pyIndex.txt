@@ -37,6 +37,13 @@ Functions: Functions start with the word 'def' and are loosely typed
 		
 OOP:	Encapsulation, abstraction, polymorphism, inheritance, classes, and instances
 
+Encapsulation: 
+	Private: double underscore preceding the name. Can only be called through a self method
+	Partially private: single underscore preceeding
+
+Inheritance: e.g. 'class Square(Polygon)' instead of 'extends' keyword
+	Child class is derived from parent class. Parent class is the base class
+
 Classes: uses '__init__' method to initialize an instance
 	instances: is a version of a class, e.g. Honda is a car
 		self is used in replacement of 'this'
