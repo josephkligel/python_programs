@@ -7,7 +7,7 @@ websites = {
 	2: "Facebook",
 	3: "Quora",
 	4: "Reddit",
-	5: "Udemy Progress Page",
+	5: "Udemy Courses",
 	6: "LinkedIn Learning"
 }
 

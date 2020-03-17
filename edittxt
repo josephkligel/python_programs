@@ -4,8 +4,9 @@ from os import *
 indexes = {
 	1: "Todolist",
 	2: "Bash reference",
-	3: "Python programming index",
-	4: "C programming reference"
+	3: "C programming reference",
+	4: "Nodej reference",
+	5: "Python programming index",
 }
 
 print("What reference text would you like to edit?")
@@ -18,8 +19,10 @@ if (number == 1):
 elif(number == 2):
 	system("nano -l /home/jkligel/bin/bashref.txt")
 elif(number == 3):
-	system("nano -l /home/jkligel/python_programs/pyIndex.txt")
-elif(number == 4):
 	system("nano -l /home/jkligel/c_programs/cref.txt")
+elif(number == 4):
+	system("nano -l /home/jkligel/Github/Programmapedia/noderef.txt")
+elif(number == 5):
+	system("nano -l /home/jkligel/python_programs/pyIndex.txt")
 else:
 	print("Invalid input. Try again.")
