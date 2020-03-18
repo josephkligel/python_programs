@@ -5,8 +5,9 @@ indexes = {
 	1: "Todolist",
 	2: "Bash reference",
 	3: "C programming reference",
-	4: "Nodej reference",
-	5: "Python programming index",
+	4: "Git commands reference",
+	5: "Nodej reference",
+	6: "Python programming index",
 }
 
 print("What reference text would you like to edit?")
@@ -14,15 +15,18 @@ for k,v in indexes.items():
 	print(k,v, sep = ') ')
 number = int(input("Type number here: "))
 
+dir = "$HOME/"
 if (number == 1):
-	system("nano -l /home/jkligel/bin/todolist.txt")
+	system("nano -l $HOME/Github/Programmapedia/todolist.txt")
 elif(number == 2):
-	system("nano -l /home/jkligel/bin/bashref.txt")
+	system("nano -l $HOME/Github/Programmapedia//bashref.txt")
 elif(number == 3):
-	system("nano -l /home/jkligel/c_programs/cref.txt")
+	system("nano -l $HOME/Github/Programmapedia/cref.txt")
 elif(number == 4):
-	system("nano -l /home/jkligel/Github/Programmapedia/noderef.txt")
+	system("nano -l $HOME/Github/Programmapedia/gitref.txt")
 elif(number == 5):
-	system("nano -l /home/jkligel/python_programs/pyIndex.txt")
+	system("nano -l $HOME/Github/Programmapedia/noderef.txt")
+elif(number == 6):
+	system("nano -l $HOME/Github/Programmapedia//pyIndex.txt")
 else:
 	print("Invalid input. Try again.")
