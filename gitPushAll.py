@@ -9,4 +9,5 @@ push = "git push -u origin master"
 system(add)
 system(commit)
 system(push)
+time.sleep(2)
 print("zigjag")
