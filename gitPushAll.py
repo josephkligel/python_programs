@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 from os import *
 import time
+from sys import stdout
 
 add = "git add ."
 commit = "git commit -m 'generic message'"
@@ -10,4 +11,4 @@ system(add)
 system(commit)
 system(push)
 time.sleep(2)
-system("zigjag\n")
+stdout.write("zigjag")
