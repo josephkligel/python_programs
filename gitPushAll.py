@@ -9,4 +9,4 @@ push = "git push -u origin master"
 system(add)
 system(commit)
 system(push)
-system("zigjag")
+print("zigjag")
