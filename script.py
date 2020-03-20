@@ -1,21 +1,11 @@
-class Polygon:
-	__width = None
-	__height = None
+a = 10
+b = 20
+print(a+b)
 
-	def set_value(self, width, height):
-		self.__width = width
-		self.__height = height
+p = "Hello "
+q = "World"
+print(p+q)
 
-	def get_width(self):
-		return self.__width
-
-	def get_height(self):
-		return self.__height
-
-class Square(Polygon):
-	def area(self):
-		return self.get_width() * self.get_height()
-
-s1 = Square()
-s1.set_value(8, 15)
-print(s1.area())
+x = [10, 20, 30]
+y = [5, 6, 7]
+print(x+y)
