@@ -1,15 +1,14 @@
-result = None
-x = int(input("Number 1: "))
-y = int(input("Number 2: "))
+class Tea:
+    def __init__(self, temperature):
+        self.__temperature = temperature
 
-try:
-    result = x / y
-except Exception as e:
-    print("An error has been found", type(e))
-else:
-    print("Inside Else")
-finally:
-    print("Inside finally")
+    def drink_tea(self):
+        if self.__temperature > 85:
+            raise ValueError("Tea is too hot.")
+        elif self.__temperature < 65:
+            print("Too cold to drink.")
+        else:
+            print("The temperature is just right. You can drink the tea!")
 
-print("----------New Line---------")
-print("Result = ", result)
+cup = Tea(89)
+cup.drink_tea()
