@@ -6,7 +6,7 @@ urllist = {
 	"quora": "https://quora.com",
 	"reddit": "https://reddit.com",
 	"udemy": "https://udemy.com",
-	"linkedin": "https://linkedin.com",
+	"linkedin": "https://www.linkedin.com/learning/me/in-progress",
 	"ebenefits": "https://www.ebenefits.va.gov/ebenefits/homepage" 
 }
 

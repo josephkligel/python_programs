@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 from tkinter import *
 from websitelist import websites
 from os import *
