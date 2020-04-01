@@ -6,7 +6,7 @@ indexes = {
 	2: "Bash reference",
 	3: "C programming reference",
 	4: "Git commands reference",
-	5: "Nodej reference",
+	5: "Nodejs reference",
 	6: "Python programming index",
 }
 
