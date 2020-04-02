@@ -38,3 +38,10 @@ list = {
 		"default": "$HOME/Github/Programmapedia/jsref.txt"
 		}
 }
+
+def add_to_list():
+	new_file_value = str(input("What is the name of this text file? "))
+	new_default_value = str(input("Type the location of the file including its name here: "))
+	with open(new_default_value) as file:
+		new_key = file.readline()[2:].strip()
+		list.update({new_key: {"file": new_file_value, "default": new_default_value}})

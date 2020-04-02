@@ -1,5 +1,6 @@
-from pytube import Youtube
+from pytube import YouTube
 
-yt = Youtube("https://www.youtube.com/watch?v=J3h7Cv2fLe4")
+yt = YouTube("https://www.youtube.com/watch?v=J3h7Cv2fLe4")
 
-print(yt.streams.all())
+dw = yt.streams.get_by_itag(18)
+dw.download("/home/jkligel/Downloads")

@@ -1,0 +1,31 @@
+#!/usr/bin/python3
+
+from os import *
+from reflist import list, add_to_list
+
+indexcheck = {}
+
+def selection():
+  print("What text would you like to edit?")
+  print("\t0: Add new text")
+
+  i = 1
+  for k, v in list.items():
+      indexcheck[i] = str(k)
+      print("\t%d: %s" % (i, str(k)))
+      i += 1
+
+  num = int(input("Type number here: "))
+  edit(num, indexcheck, list)
+
+def edit(num, indexcheck, list):
+    if num == 0:
+        print("A work in progress. Does nothing for now.")
+    else:
+        for k, v in indexcheck.items():
+            if num == k:
+                for key, value in list.items():
+                    if v == key:
+                        return system("nano %s" % (value["default"]))
+
+selection()
