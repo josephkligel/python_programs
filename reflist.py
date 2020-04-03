@@ -44,4 +44,6 @@ def add_to_list():
 	new_default_value = str(input("Type the location of the file including its name here: "))
 	with open(new_default_value) as file:
 		new_key = file.readline()[2:].strip()
-		list.update({new_key: {"file": new_file_value, "default": new_default_value}})
+	list.update({new_key: {"file": new_file_value, "default": new_default_value}})
+	# with open("/home/jkligel/python_programs/reflist.py", 'a') as file:
+	# 	file.write(list[new_key] = {"file": new_file_value, "default": new_default_value})

@@ -20,7 +20,7 @@ def selection():
 
 def edit(num, indexcheck, list):
     if num == 0:
-        print("A work in progress. Does nothing for now.")
+        add_to_list()
     else:
         for k, v in indexcheck.items():
             if num == k:
