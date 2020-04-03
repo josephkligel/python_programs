@@ -7,7 +7,6 @@ add = "git add ."
 commit = "git commit -m 'generic message'"
 push = "git push -u origin master"
 
-system(add)
+system("%s" % ("git add ."))
 system(commit)
 system(push)
-system("echo zigjag")

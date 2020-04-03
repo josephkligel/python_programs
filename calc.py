@@ -1,3 +1,6 @@
+#/usr/bin/python3
+
+import sys
 
 def add(x, y):
     return x + y
@@ -11,6 +14,28 @@ def multiply(x, y):
 def divide(x, y):
     return x / y
 
+
+def ask_for_number_args():
+	x = float(input("\nFirst number to calculate: "))
+	y = float(input("Second number to calculate: "))
+	return x, y
+
+def check_number(num):
+	if num == 0:
+		sys.exit()
+	else:
+		x, y = ask_for_number_args()
+		if num == 1:
+        		print(x,'+',y,'=', add(x, y))
+		elif num == 2:
+			print(x,'-',y,'=', subtract(x, y))
+		elif num == 3:
+			print(x,'*',y,'=', multiply(x, y))
+		elif num == 4:
+			print(x,'/',y,'=', divide(x, y))
+		else:
+			print("Invalid input")
+
 def calculate():
 	print("Choose what type of calculation you would like to perform")
 	print("0: Exit Calculator")
@@ -20,23 +45,12 @@ def calculate():
 	print("4: divide")
 
 	num = int(input("Type number here: "))
-    x = float(input("\nFirst number to calculate: "))
-    y = float(input("Second number to calculate: "))
-
-	if num == 0:
-		exit()
-	elif num == 1:
-        print(x,'+',y,'=', add(x, y))
-	elif num == 2:
-		print(x,'-',y,'=', subtract(x, y))
-	elif num == 3:
-		print(x,'*',y,'=', multiply(x, y))
-	elif num == 4:
-		print(x,'/',y,'=', divide(x, y))
-	else:
-		print("Invalid input")
+	check_number(num)
 
 	while(num > 0):
-		__calculate()
+		print()
+		print("------------New Calculation------------")
+		calculate()
+
 
 calculate()
