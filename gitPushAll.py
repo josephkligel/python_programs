@@ -6,5 +6,5 @@ from sys import stdin
 system("%s" % ("git add ."))
 system("%s" % ("git commit -m 'generic message generated from gitPushAll python program'"))
 
-#stdin = sio("zigjag")
+stdin = sio("zigjag")
 system("%s" % ("git push -u origin master"))

@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#/usr/bin/python3
 import json
 import re
 
@@ -23,7 +23,7 @@ with open(filename) as fh:
                     if subkey in dict[command][i]:
                         dict[command][i][subkey].append({subkeyofsubkey: value.strip()})
                     else:
-                        pass #for if I need to use it
+                        pass#line 22 to 26
             else:
                 command, description = line.strip().split(":", 1)
                 dict[command] = [{'description': description.strip()}]
@@ -31,6 +31,8 @@ with open(filename) as fh:
     except Exception:
         print(Exception.message)
     finally:
+        pass
+
         output_file = open("/home/jkligel/Desktop/outputbash.json", "w")
         json.dump(dict, output_file, indent=4, sort_keys=False)
         output_file.close()
