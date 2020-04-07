@@ -1,7 +1,13 @@
 #!/usr/bin/python3
 
 from os import *
-from reflist import list, add_to_list
+from reflist import lst, add_to_list
+# import argparse
+#
+# parser = argparse.ArgumentParser(description='Command-line program to open and edit reference text for different programming languages', prefix_chars='--')
+# for k, v in lst.items():
+#     parser.add_argument(v['arg'], help='Option for {0}. It opens the {1} file'.format(k, v['file']), action=system('nano {0}').format(v['default']))
+# args = parser.parse_args()
 
 indexcheck = {}
 
@@ -10,21 +16,21 @@ def selection():
   print("\t0: Add new text")
 
   i = 1
-  for k, v in list.items():
+  for k, v in lst.items():
       indexcheck[i] = str(k)
       print("\t%d: %s" % (i, str(k)))
       i += 1
 
   num = int(input("Type number here: "))
-  edit(num, indexcheck, list)
+  edit(num, indexcheck, lst)
 
-def edit(num, indexcheck, list):
+def edit(num, indexcheck, lst):
     if num == 0:
-        add_to_list()
+        add_to_lst()
     else:
         for k, v in indexcheck.items():
             if num == k:
-                for key, value in list.items():
+                for key, value in lst.items():
                     if v == key:
                         return system("nano %s" % (value["default"]))
 

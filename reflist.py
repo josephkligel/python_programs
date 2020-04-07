@@ -1,41 +1,50 @@
 #!/usr/bin/python3
 
-list = {
+lst = {
 	"Todolist": {
 		"file": "todolist.txt",
-		"default": "$HOME/Github/Programmapedia/todolist.txt"
+		"default": "$HOME/Github/Programmapedia/todolist.txt",
+		"arg": 'todo'
 		},
 	"Bash Reference": {
 		"file": "bashref.txt",
-		"default": "$HOME/Github/Programmapedia/bashref.txt"
+		"default": "$HOME/Github/Programmapedia/bashref.txt",
+		"arg": 'bash'
 		},
 	"C Programming Reference": {
 		"file": "cref.txt",
-		"default": "$HOME/Github/Programmapedia/cref.txt"
+		"default": "$HOME/Github/Programmapedia/cref.txt",
+		"arg": 'c'
 		},
 	"CSS Reference": {
 		"file": "cssref.txt",
-		"default": "$HOME/Github/Programmapedia/cssref.txt"
+		"default": "$HOME/Github/Programmapedia/cssref.txt",
+		"arg": 'css'
 		},
 	"Git Reference": {
 		"file": "gitref.txt",
-		"default": "$HOME/Github/Programmapedia/gitref.txt"
+		"default": "$HOME/Github/Programmapedia/gitref.txt",
+		"arg": 'git'
 		},
 	"HTML Reference": {
 		"file": "htmlref.txt",
-		"default": "$HOME/Github/Programmapedia/htmlref.txt"
+		"default": "$HOME/Github/Programmapedia/htmlref.txt",
+		"arg": 'html'
 		},
 	"Nodejs Reference": {
 		"file": "noderef.txt",
-		"default": "$HOME/Github/Programmapedia/noderef.txt"
+		"default": "$HOME/Github/Programmapedia/noderef.txt",
+		"arg": 'node'
 		},
 	"Python Index": {
 		"file": "pyIndex.txt",
-		"default": "$HOME/Github/Programmapedia/pyIndex.txt"
+		"default": "$HOME/Github/Programmapedia/pyIndex.txt",
+		"arg": 'py'
 		},
 	"JavaScript Reference":{
 		"file": "jsref.txt",
-		"default": "$HOME/Github/Programmapedia/jsref.txt"
+		"default": "$HOME/Github/Programmapedia/jsref.txt",
+		"arg": 'js'
 		}
 }
 
