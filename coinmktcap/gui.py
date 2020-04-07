@@ -81,6 +81,10 @@ def my_portfolio():
     totalpl = Label(pycrypto, text='${:,.2f}'.format(total_pl), bg='#F3F4F6', fg=font_color(float('{:.2f}'.format(total_pl))), font='lato 12', borderwidth=2, relief='groove', padx='2', pady='2')
     totalpl.grid(row=coin_row, column=6, sticky=N+S+E+W)
 
+    api = ''
+
+    update = Button(pycrypto, text='Update', command=my_portfolio, bg='#142E54', fg='white', font='lato 12', borderwidth=2, relief='groove', padx='2', pady='2')
+    update.grid(row=coin_row+1, column=6, sticky=N+S+E+W)
 
 name = Label(pycrypto, text='Coin Name', bg='#142E54', fg='white', font='lato 12 bold', padx='5', pady='5', borderwidth='2', relief='groove')
 name.grid(row=0, column=0, sticky=N+S+E+W)
