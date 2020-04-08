@@ -2,7 +2,7 @@
 
 import json
 
-filename = '/home/jkligel/Github/Programmapedia/bashref.txt'
+filename = input('Paste link of file here, include file location: ')
 
 dict = {}
 tabbed_line = ''
