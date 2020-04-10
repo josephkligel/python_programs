@@ -15,10 +15,10 @@ for k,v in options.items():
 num = int(input("Type number here: "))
 
 if(num == 1):
-	system("$HOME/Postman/Postman");
+	system("/opt/Postman/Postman");
 elif(num == 2):
-	system("$HOME/robo3t-1.3.1/bin/robo3t");
+	system("/opt/robo3t-1.3.1/bin/robo3t");
 elif(num == 3):
-	system("$HOME/MegaBasterdLinux.run");
+	system("/opt/MegaBasterdLinux.run");
 else:
 	print("Invalid input. Try again.")

@@ -14,11 +14,11 @@ def selection():
   print("\t0: Add new text")
 
   i = 1
-  with open('reflist.json', 'r') as fh:
+  with open('/home/jkligel/python_programs/reflist.json', 'r') as fh:
       data = json.load(fh)
       for k,v in data.items():
           indexcheck[i] = k
-          if i >= 10:
+          if i == 10:
               print("-------Specific Text Guides-------")
               print('\t%d: %s' % (i, k))
           else:
@@ -39,8 +39,8 @@ def edit(num, indexcheck, data):
                         return system("nano %s" % (value["default"]))
 
 def add_to_lst(data):
-    textfile = input("Type name of text name here, include extension: ")
-    if textfile == '' or text_location == '':
+    textfile = input("Type name of textfile here, include extension: ")
+    if textfile == '':
         print("\n---------Nothing added---------\n")
         main()
     else:
