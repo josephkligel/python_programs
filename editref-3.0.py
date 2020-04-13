@@ -44,10 +44,10 @@ def add_to_lst(data):
         print("\n---------Nothing added---------\n")
         main()
     else:
-        text_location = input("Type location of text file here, include textfile name in the location: ")
+        text_location = input("Type file location only here, no ending slash or file name: ")
         name, ext = textfile.split('.', 1)
-        data[name.capitalize()] = {'file': textfile, 'default': text_location}
-        with open('reflist.json', 'w') as fh:
+        data[name.capitalize()] = {'file': textfile, 'default': text_location+'/'+textfile}
+        with open('/home/jkligel/python_programs/reflist.json', 'w') as fh:
             json.dump(data, fh)
         main()
 
