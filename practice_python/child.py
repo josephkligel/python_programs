@@ -8,7 +8,7 @@ import pexpect
 # print(child.)
 # child.sendline('yes')
 
-cmd = 'gitPushAll.py'.split()
+cmd = 'gitPushAll.py | zigjag'.split()
 p = subprocess.Popen(cmd)
-p.communicate(input='\nzigjag', timeout=10)
+# p.communicate(input='\nzigjag', timeout=10)
 # p = subprocess.check_output('gitPushAll.py', input=b'zigjag')
