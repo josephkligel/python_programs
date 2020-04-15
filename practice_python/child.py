@@ -7,6 +7,7 @@ try:
     child.expect(".+")
     child.sendline('zigjag')
     child.logfile = sys.stdout.buffer
+    print(child.logfile)
 except:
     print('Something went wrong!')
 
