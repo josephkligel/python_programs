@@ -3,8 +3,8 @@ from pexpect import popen_spawn, spawn
 import pexpect
 
 
-child = pexpect.spawn('gitPushAll.py')
-child.expect("Username for 'https://github.com':")
+child = pexpect.spawn("gitPushAll.py")
+child.expect("Username .*:")
 child.sendline('zigjag')
 
 # cmd = 'echo zigjag | gitPushAll.py'.split()
