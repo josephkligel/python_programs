@@ -9,6 +9,7 @@ try:
     print(child.after)
     child.expect('Password.+: ')
     child.sendline('wrong')
+    child.logfile = open("./mylog", 'w')
     print(child.after)
     print(child.after)
 except:
