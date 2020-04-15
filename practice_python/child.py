@@ -9,6 +9,9 @@ try:
     child.sendline('zigjag')
     child.expect('Password.+: ')
     child.sendline('wrong')
+    with open('./mylog') as log:
+        for line in log:
+            print(line)
 except:
     print('-----Something went wrong!----')
     print(str(child))
