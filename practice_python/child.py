@@ -9,7 +9,6 @@ try:
     child.expect('.*assword: ')
     child.sendline('wrong')
     print(child.after)
-    child.logfile = sys.stdout.buffer
 except:
     print('Something went wrong!')
     print(str(child))
