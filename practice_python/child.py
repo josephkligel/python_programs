@@ -10,4 +10,4 @@ import pexpect
 
 cmd = 'gitPushAll.py'.split()
 p = subprocess.Popen(cmd)
-p.communicate(input='zigjag')
+p.communicate(input='zigjag', timeout=10)
