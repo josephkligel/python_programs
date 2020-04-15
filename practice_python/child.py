@@ -8,7 +8,7 @@ try:
     child.expect("Username.+: ")
     child.sendline('zigjag')
     child.expect('Password.+: ')
-    child.sendline('wrong')
+    child.sendline('104Percent%')
 except:
     print('Something went wrong!')
     print(str(child))
