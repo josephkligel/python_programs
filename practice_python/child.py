@@ -7,9 +7,10 @@ try:
     child.expect("Username.+: ")
     child.sendline('zigjag')
     child.logfile = sys.stdout.buffer
-    print(child.logfile)
+    print(str(child.logfile))
 except:
     print('Something went wrong!')
+    print(str(child))
 
 # cmd = 'echo zigjag | gitPushAll.py'.split()
 # print(cmd)
