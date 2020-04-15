@@ -10,4 +10,5 @@ import pexpect
 
 cmd = 'gitPushAll.py'.split()
 p = subprocess.Popen(cmd)
+p.wait()
 p.stdin.write(b'zigjag')
