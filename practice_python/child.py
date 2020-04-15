@@ -9,6 +9,7 @@ try:
     print(child.before)
     child.sendline('zigjag')
     print(child.before)
+    print(child.read())
     # child.logfile = sys.stdout.buffer
     # print(str(child.logfile))
 except:
