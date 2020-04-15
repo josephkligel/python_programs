@@ -8,8 +8,8 @@ try:
     child.expect("Username.+: ")
     print(child.before)
     child.sendline('zigjag')
-    child.logfile = sys.stdout.buffer
-    print(str(child.logfile))
+    # child.logfile = sys.stdout.buffer
+    # print(str(child.logfile))
 except:
     print('Something went wrong!')
     print(str(child))
