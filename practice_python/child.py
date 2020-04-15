@@ -1,5 +1,6 @@
 import sys, subprocess
 from pexpect import popen_spawn, spawn
+import pexpect
 
 # cmd = "echo 'Type yes or no: '"
 # child = spawn('ls -l')
@@ -8,5 +9,4 @@ from pexpect import popen_spawn, spawn
 # child.sendline('yes')
 
 cmd = 'gitPushAll.py'.split()
-# child = subprocess.call(cmd)
-subprocess.getoutput(cmd)
+subprocess.Popen(cmd)
