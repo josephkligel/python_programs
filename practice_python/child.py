@@ -6,7 +6,7 @@ try:
     child = pexpect.spawn("gitPushAll.py")
     child.expect("Username.+: ")
     child.sendline('zigjag')
-    child.logfile = sys.stdout.buffer.flush()
+    child.logfile = sys.stdout.buffer
 except:
     print('Something went wrong!')
     print(str(child))
