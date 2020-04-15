@@ -2,7 +2,7 @@ import sys
 from pexpect import spawn, EOF
 
 username = 'zigjag'
-cmd = 'gitPushAll.py'.split()
+cmd = 'gitPushAll.py'
 child = spawn(cmd, timeout=10)
 child.logfile_read = sys.stdout
 
