@@ -6,6 +6,7 @@ try:
     child = pexpect.spawn("gitPushAll.py")
     child.expect("Username.+: ")
     child.sendline('zigjag')
+    print(child.after)
     child.expect('Password.+: ')
     child.sendline('wrong')
     print(child.after)
