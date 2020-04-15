@@ -10,6 +10,7 @@ try:
     child.expect('Password.+: ')
     child.sendline('wrong')
     print(child.after)
+    print(child.after)
 except:
     print('Something went wrong!')
     print(str(child))
