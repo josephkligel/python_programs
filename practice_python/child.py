@@ -3,7 +3,7 @@ from pexpect import popen_spawn, spawn
 import pexpect
 
 try:
-    child = pexpect.spawn("gitPushAll.py")
+    child = pexpect.spawn("gitPushAll.py", encoding='utf-8')
     child.logfile = open("./mylog", 'wb')
     child.expect("Username.+: ")
     child.sendline('wrong')
