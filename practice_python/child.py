@@ -8,9 +8,9 @@ try:
     child.expect("Username.+: ")
     child.sendline('zigjag')
     child.expect('Password.+: ')
-    child.sendline('104Percent%')
+    child.sendline('wrong')
 except:
-    print('Something went wrong!')
+    print('-----Something went wrong!----')
     print(str(child))
 
 # cmd = 'echo zigjag | gitPushAll.py'.split()
