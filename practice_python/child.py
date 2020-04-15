@@ -4,12 +4,9 @@ import pexpect
 
 try:
     child = pexpect.spawn("gitPushAll.py")
-    # print(child.before)
     child.expect("Username.+: ")
-    # print(child.before)
     child.sendline('zigjag')
-    # print(child.before)
-    print(child.read())
+    child.logfile = sys.stdout
 except:
     print('Something went wrong!')
     print(str(child))
