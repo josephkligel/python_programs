@@ -4,8 +4,9 @@ import pexpect
 
 
 child = pexpect.spawn("gitPushAll.py")
-child.expect("Username .+")
+child.expect(".+")
 child.sendline('zigjag')
+child.logfile = sys.stdout.buffer
 
 # cmd = 'echo zigjag | gitPushAll.py'.split()
 # print(cmd)
