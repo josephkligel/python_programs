@@ -9,4 +9,5 @@ import pexpect
 # child.sendline('yes')
 
 cmd = 'gitPushAll.py'.split()
-subprocess.Popen(cmd)
+p = subprocess.Popen(cmd)
+p.stdin.write(b'zigjag')
