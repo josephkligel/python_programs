@@ -4,9 +4,9 @@ import os
 def pushing():
     print('Waiting')
     event.wait()
-    os.system('zigjag')
+    print('zigjag')
 
 thread = threading.Thread(target=pushing)
 x = os.system('gitPushAll.py')
-if (x == 'username:'):
+if (x == "Username for 'https://github.com'"):
     event.set()
