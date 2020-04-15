@@ -4,14 +4,14 @@ import pexpect
 
 try:
     child = pexpect.spawn("gitPushAll.py", encoding='utf-8')
-    child.logfile = open("./mylog", 'wb')
+    child.logfile = sys.stdout
     child.expect("Username.+: ")
     child.sendline('wrong')
     child.expect('Password.+: ')
     child.sendline('wrong')
-    with open('./mylog') as log:
-        for line in log:
-            print(line)
+    # with open('./mylog') as log:
+    #     for line in log:
+    #         print(line)
 except:
     print('-----Something went wrong!----')
     print(str(child))
