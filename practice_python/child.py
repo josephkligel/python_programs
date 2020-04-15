@@ -4,11 +4,11 @@ import pexpect
 
 try:
     child = pexpect.spawn("gitPushAll.py")
-    print(child.after)
+    print(child.before)
     child.expect("Username.+: ")
-    print(child.after)
+    print(child.before)
     child.sendline('zigjag')
-    print(child.after)
+    print(child.before)
     # child.logfile = sys.stdout.buffer
     # print(str(child.logfile))
 except:
