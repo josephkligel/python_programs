@@ -4,7 +4,7 @@ import os
 def pushing():
     print('Waiting')
     event.wait()
-    print('zigjag')
+    os.system('exit')
 
 thread = threading.Thread(target=pushing)
 x = os.system('gitPushAll.py')
