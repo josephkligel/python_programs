@@ -4,7 +4,7 @@ import pexpect
 
 try:
     child = pexpect.spawn("gitPushAll.py")
-    child.logfile = open("./mylog", 'w')
+    child.logfile = open("./mylog", 'wb')
     child.expect("Username.+: ")
     child.sendline('zigjag')
     child.expect('Password.+: ')
