@@ -4,12 +4,12 @@ import pexpect
 
 try:
     child = pexpect.spawn("gitPushAll.py")
+    child.logfile = open("./mylog", 'w')
     child.expect("Username.+: ")
     child.sendline('zigjag')
     # print(child.after)
     child.expect('Password.+: ')
     child.sendline('wrong')
-    child.logfile = open("./mylog", 'w')
     print(child.after)
     print(child.after)
 except:
