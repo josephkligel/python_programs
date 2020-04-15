@@ -8,7 +8,7 @@ try:
     child.expect("Username.+: ")
     print(child.after)
     child.sendline('zigjag')
-    child.after
+    print(child.after)
     # child.logfile = sys.stdout.buffer
     # print(str(child.logfile))
 except:
