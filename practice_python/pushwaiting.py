@@ -1,12 +1,12 @@
 import threading
 import os
+import sys
 
 def pushing():
-    print('Waiting')
+    os.system('gitPushAll.py')
     event.wait()
-    os.system('exit')
+    print('zigjag')
 
 thread = threading.Thread(target=pushing)
-x = os.system('gitPushAll.py')
-if (x == "Username for 'https://github.com:'"):
+if (sys.stdin == "Username for 'https://github.com:'"):
     event.set()
