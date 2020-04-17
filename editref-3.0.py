@@ -3,6 +3,7 @@
 from os import system, walk, path
 import json
 import fnmatch
+import sys
 
 indexcheck = {}
 
@@ -63,6 +64,14 @@ def search_for_file(pattern):
                 new_file.close()
                 system('nano %s' % (full_file_name))
 
-
-if __name__ == '__main__':
+if len(sys.argv) < 2:
     main()
+else:
+    with open('/home/jkligel/python_programs/reflist.json') as fh:
+        datalist = json.load(fh)
+    keyphrase = sys.argv[1]
+    if keyphrase in datalist:
+        system(f'vim {datalist[keyphrase]["default"]}')
+    else:
+        print(f"{keyphrase} is not in the reflist")
+        print(f'Choose one of these:\n{list(datalist.keys())}')
