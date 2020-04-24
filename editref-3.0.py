@@ -4,6 +4,7 @@ from os import system, walk, path
 import json
 import fnmatch
 import sys
+import re
 
 indexcheck = {}
 
@@ -69,9 +70,10 @@ if len(sys.argv) < 2:
 else:
     with open('/home/jkligel/python_programs/reflist.json') as fh:
         datalist = json.load(fh)
-    keyphrase = sys.argv[1]
-    if keyphrase in datalist:
-        system(f'vim {datalist[keyphrase]["default"]}')
+    argument = sys.argv[1]
+
+    if argument in datalist:
+        system(f'vim {datalist[argument]["default"]}')
     else:
-        print(f"{keyphrase} is not in the reflist")
+        print(f"{argument} is not in the reflist")
         print(f'Choose one of these:\n{list(datalist.keys())}')
