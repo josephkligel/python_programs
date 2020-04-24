@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input id='location' type="radio" name="location" value="Location">Location
+    <script type="text/javascript">
+      let locRadio = document.querySelector('#location');
+      let inputvar = document.createElement('INPUT');
+      inputvar.setAttribute('type', 'date');
+      locRadio.addEventListener('change', function(){
+        document.body.appendChild(inputvar);
+      });
+    </script>
+  </body>
+</html>
