@@ -1,9 +1,12 @@
 #!/usr/bin/python3
-from os import system, walk, path
-import json, time, fnmatch
 
-def clear_screen():
-    system('clear')
+from os import system, walk, path
+import json
+import fnmatch
+import sys
+import re
+
+indexcheck = {}
 
 def main():
     selection()
@@ -15,25 +18,27 @@ def selection():
   i = 1
   with open('/home/jkligel/python_programs/reflist.json', 'r') as fh:
       data = json.load(fh)
+      for k,v in data.items():
+          indexcheck[i] = k
+          if i == 10:
+              print("-------Specific Text Guides-------")
+              print('\t%d: %s' % (i, k))
+          else:
+              print('\t%d: %s' % (i, k))
+          i+=1
 
-  index_checker = dict(enumerate(data.items(), 1))
-  for k, v in index_checker.items():
-      if int(k) == 10:
-          print(7*'-'+'Specific Text Guides'+7*'-')
-          print(f'\t{k}: {v[0]}')
-      else:
-          print(f'\t{k}: {v[0]}')
   num = int(input("Type number here: "))
-  for k, v in index_checker.items():
-      if num == 0:
-          add_to_lst(data)
-      elif num == k:
-          system(f'nano {v[1]["default"]}')
-      # elif num != k:
-      #     print('\nNo such number. Try again.\n')
-      #     time.sleep(1)
-      #     clear_screen()
-      #     main()
+  edit(num, indexcheck, data)
+
+def edit(num, indexcheck, data):
+    if num == 0:
+        add_to_lst(data)
+    else:
+        for k, v in indexcheck.items():
+            if num == k:
+                for key, value in data.items():
+                    if v == key:
+                        return system("nano %s" % (value["default"]))
 
 def add_to_lst(data):
     textfile = input("Type name of textfile here, include extension: ")
@@ -41,10 +46,10 @@ def add_to_lst(data):
         print("\n---------Nothing added---------\n")
         main()
     else:
-        text_location = input("Type location of text file here, include textfile name in the location: ")
+        text_location = input("Type file location only here, no ending slash or file name: ")
         name, ext = textfile.split('.', 1)
-        data[name.capitalize()] = {'file': textfile, 'default': text_location}
-        with open('reflist.json', 'w') as fh:
+        data[name.capitalize()] = {'file': textfile, 'default': text_location+'/'+textfile}
+        with open('/home/jkligel/python_programs/reflist.json', 'w') as fh:
             json.dump(data, fh)
         main()
 
@@ -60,6 +65,15 @@ def search_for_file(pattern):
                 new_file.close()
                 system('nano %s' % (full_file_name))
 
-
-if __name__ == '__main__':
+if len(sys.argv) < 2:
     main()
+else:
+    with open('/home/jkligel/python_programs/reflist.json') as fh:
+        datalist = json.load(fh)
+    argument = sys.argv[1]
+
+    if argument in datalist:
+        system(f'vim {datalist[argument]["default"]}')
+    else:
+        print(f"{argument} is not in the reflist")
+        print(f'Choose one of these:\n{list(datalist.keys())}')
