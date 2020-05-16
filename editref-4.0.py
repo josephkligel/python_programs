@@ -38,7 +38,7 @@ def edit(num, indexcheck, data):
             if num == k:
                 for key, value in data.items():
                     if v == key:
-                        return system("nano %s" % (value["default"]))
+                        return system("vim %s" % (value["default"]))
 
 def add_to_lst(data):
     textfile = input("Type name of textfile here, include extension: ")
@@ -63,7 +63,7 @@ def search_for_file(pattern):
                 full_file_name = os.path.join('/home/jkligel/Desktop',pattern)
                 new_file = open(full_file_name, 'w')
                 new_file.close()
-                system('nano %s' % (full_file_name))
+                system('vim %s' % (full_file_name))
 
 if len(sys.argv) < 2:
     main()
