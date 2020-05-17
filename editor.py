@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import filedialog, messagebox
 from tkinter import ttk
 import os
+import sys
 
 file_name = ''
 
@@ -26,6 +27,10 @@ class Editor(Tk):
         filemenu.add_command(label='Save As', command=lambda: self.save_file(save_as=True))
         filemenu.entryconfig('Open', accelerator='Ctrl+O')
         filemenu.entryconfig('Save', accelerator='Ctrl+S')
+
+        programmingmenu = Menu(menubar, tearoff=0)
+        menubar.add_cascade(menu=programmingmenu, label='Programming')
+        programmingmenu.add_command(label='C Template', command=lambda: self.template('C'))
 
         self.config(menu=menubar)
 
@@ -57,7 +62,21 @@ class Editor(Tk):
                 with open(file_name, 'w') as fh:
                     for line in self.textbox.get('1.0', 'end'):
                         fh.write(line)
-                
+
+    def template(self, language):
+        if language == 'C':
+            self.textbox.insert('1.0', """#include <stdio.h>\n
+int main(int argc, int *argv[])\n
+{\n
+}""")
+            #self.textbox.mark_set('insert', '2.4')# TODO
+    
+    def on_closing(self):
+        print('closing')
+        self.destroy()
+    
+    #self.protocol('WM_DELETE_WINDOW', self.on_closing)# TODO
+
 if __name__ == '__main__':
     editor = Editor()
     editor.mainloop()

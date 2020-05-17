@@ -17,6 +17,7 @@ class App(Tk):
         notebook = ttk.Notebook(self)
         notebook.pack(fill='both', expand=True)
         tab1 = ttk.Frame(notebook)
+        self.create_requirements(tab1)
         tab2 = ttk.Frame(notebook)
         tab3 = ttk.Frame(notebook)
         notebook.add(tab1, text='Required')
@@ -32,6 +33,17 @@ class App(Tk):
         menubar.add_cascade(label='File', menu=file_menu)
         self.config(menu=menubar)
 
+    def create_requirements(self, parent):
+        import platform
+        Label(parent, text='Operating System: ').grid(row=0, column=0, sticky='w')
+        os_system = platform.platform()
+        os_label = Label(parent, text=os_system)
+        os_label.grid(row=0, column=1, sticky='w')
+
+        Label(parent, text='Python Version').grid(row=1, column=0, sticky='w')
+        python_version = platform.python_version()
+        py_label = Label(parent, text=python_version)
+        py_label.grid(row=1, column=1, sticky='w')
 
     def create_buttons(self, parent, button_text='Click Here', command=None):
         frame1 = ttk.Frame(parent)
@@ -59,13 +71,14 @@ class App(Tk):
                 column += 2
 
         def all():#Todo
-            frame2.event_generate('<ButtonPress>')
+            frame2.event_generate('<ButtonPress>')# TODO: INSTALL ALL
 
         all_button.config(command=all)
 
-    def system_command(self, command):# TODO: Add a way to auto install programs for user
-        import os
-        os.system(f'{command}')
+    def system_command(self, os=None):# TODO: Add a way to auto install programs for user
+        pass
 
-app = App()
-app.mainloop()
+if __name__ == '__main__':
+
+    app = App()
+    app.mainloop()
