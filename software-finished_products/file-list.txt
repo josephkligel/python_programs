@@ -1,0 +1,25 @@
+/home/jkligel/python_programs/coinmktcap
+	bitcoin.ico
+	bitcoin2.ico
+  >bin
+			pip3.8
+			activate.fish
+			easy_install
+			easy_install-3.8
+			chardetect
+			activate.csh
+			python3
+			Activate.ps1
+			python
+			activate
+			pip3
+			python3.8
+			pip
+	gui.py
+	lib64
+	pyvenv.cfg
+	currencylist.py
+	coin.db
+	main.py
+  >share
+			python-wheels
