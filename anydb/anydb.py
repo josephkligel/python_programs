@@ -1,4 +1,6 @@
-from tkinter import Tk, Menu, filedialog, Label, StringVar, Text, Entry
+from tkinter import Tk, StringVar, VERTICAL 
+from tkinter import Label, Text, Entry, Canvas
+from tkinter import Menu, filedialog
 from tkinter import ttk
 from glob import iglob
 import sqlite3
@@ -12,10 +14,16 @@ class App(Tk):
         self.notebook = ttk.Notebook(self)
         self.notebook.pack()
         self.tab1 = ttk.Frame(self.notebook)
-        self.tab2 = ttk.Frame(self.notebook)
+        self.tab2 = Canvas(self.notebook)
         self.notebook.add(self.tab1, text='Tab 1')
         self.notebook.add(self.tab2, text='Tab 2')
+        
         self.create_buttons(self.tab1)
+
+        #yscroll = ttk.Scrollbar(self.tab2, orient=VERTICAL, command=self.tab2.yview)
+        #self.tab2.config(yscrollcommand=yscroll.set)
+        #yscroll.grid(row=0, column=20, sticky='ns')
+        #self.tab2.columnconfigure(20, weight=1)
 
     def create_menu(self):
         menubar = Menu(self)
