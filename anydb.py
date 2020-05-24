@@ -1,4 +1,4 @@
-from tkinter import Tk, Menu, filedialog, Label, StringVar
+from tkinter import Tk, Menu, filedialog, Label, StringVar, Text, Entry
 from tkinter import ttk
 from glob import iglob
 import sqlite3
@@ -54,22 +54,24 @@ class App(Tk):
          #   print('Could not retrieve table name')
 
     def populate_table(self, parent, table):
-        print(self.table_name.get())
-        self.get_all_data = self.cursor.execute(f'SELECT * FROM {self.table_name.get()}')
+        self.get_all_data = self.cursor.execute(f'SELECT * FROM {table}')
         self.column_names = [description[0] for description in self.get_all_data.description]
         
         #Create Header
         row, column = 0, 0
         for name in self.column_names:
-            Label(parent, text=name.upper(), bg='#142E54', fg='white', relief='groove',
+            Label(parent, bg='#142E54', text=name, fg='white', relief='groove',
                 font='lato 10 bold', borderwidth=2).grid(row=row, column=column, sticky='nsew')
             column += 1
+
         #Add rest of data
         row, column = 1, 0
         for data_row in self.get_all_data:
             for data_cell in data_row:
-                Label(parent, text=data_cell, bg='#fff', fg='#000', borderwidth=2,
-                    relief='groove', font='lato 10').grid(row=row, column=column, sticky='nsew')
+                cell = Entry(parent, bg="White", fg="Black", borderwidth=2, relief='groove', font='lato 10')
+                cell.grid(row=row, column=column, sticky='nsew')
+                cell.insert(0, data_cell)
+                cell.configure(state='readonly')
                 column += 1
             row += 1
             column = 0
