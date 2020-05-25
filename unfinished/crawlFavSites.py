@@ -8,7 +8,7 @@ import re
 import sys
 from pprint import pprint
 
-parser = argparse.ArgumentParser(description='A web crawling program to collect external links from well-liked sites')
+parser = argparse.ArgumentParser(description='A web crawling program to collect external links from site')
 parser.add_argument('-u', '--url', help='Type url address after flag. Make sure to include all beginning schemes.')
 parser.add_argument('-d', '--depth', help='The max number of links that are to be found')
 args = parser.parse_args()
@@ -37,5 +37,5 @@ if len(sys.argv) < 2:
     getExternalLinks(url, count=depth)
 else:
     url = args.url or url.u
-    # depth = args.d or args.depth
-    getExternalLinks(url)
+    depth = args.depth or args.d
+    getExternalLinks(url, count=depth)
