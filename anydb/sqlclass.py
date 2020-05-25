@@ -26,12 +26,11 @@ class Database():
     def update_data(self, table_name, data):
         self.descriptions = [description[0] for description in self.get_all_data(self.table).description]
         update_string = ''
-        Q = '"'
         for i,j in zip(self.descriptions[1:], data[1:]):
             if i == self.descriptions[-1]:
-                update_string += (i + '=' + Q + j + Q)
+                update_string += f'{i}="{j}"'
             else:
-                update_string += (i + '=' + Q + j + Q +', ')
+                update_string += f'{i}="{j}", '
         statement = f'UPDATE {table_name} SET {update_string} WHERE {self.descriptions[0]}={data[0]}'
         self.cursor.execute(statement)
         self.conn.commit()
@@ -47,8 +46,6 @@ class Database():
 
 if __name__ == '__main__':
     app = Database('sample.db', table='employees')
-    
-    #app.delete_data(app.table, ('25', 'SoSo', '97000.0', 'Time', 'Viewer'))
-    
+    #app.update_data(app.table, ('24', 'Sonya', '100000.0', 'MK', 'Agent'))
     all = app.get_all_data(app.table)
     print(app.print_data(all))

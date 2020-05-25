@@ -24,7 +24,7 @@ class App(Tk):
         if os.path.exists('./last_database.log'):
             with open('./last_database.log', 'r') as fr:
                 last_database = fr.readline().strip()
-            self.database.config(text=last_database)
+            self.database_box.insert(1.0, last_database)
             self.get_connection(last_database)
     
     def create_menu(self):
@@ -33,21 +33,21 @@ class App(Tk):
         self.config(menu=menubar)
 
     def create_buttons(self, parent):
-        self.database = Label(parent)
-        self.database.grid(row=0, column=0)
+        self.database_box = Text(parent, height=1)
+        self.database_box.grid(row=0, column=0, padx=10, pady=10)
         openBtn = ttk.Button(parent, text='Choose Db')
-        openBtn.grid(row=0, column=1)
+        openBtn.grid(row=0, column=1, padx=10, pady=10, sticky='e')
         openBtn.config(command=self.choose_file)
 
         self.table_var = StringVar()
         self.combobox = ttk.Combobox(parent, textvariable=self.table_var)
-        self.combobox.grid(row=1, column=0, columnspan=2)
+        self.combobox.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky='we')
         self.populate_button = ttk.Button(parent, text='Populate Table',  command=lambda: self.populate_table(self.tab2, self.table_var.get()))
-        self.populate_button.grid(row=2, column=1, sticky='e')
+        self.populate_button.grid(row=2, column=1, padx=10, pady=10, sticky='e')
 
     def choose_file(self):
         database_dialog = filedialog.askopenfile(initialdir='./')
-        self.database.config(text=database_dialog.name)
+        self.database_box.insert(1.0, database_dialog.name)
         with open('last_database.log', 'w') as fh:
             fh.write(f'{database_dialog.name}\n')
         self.get_connection(database_dialog.name)
