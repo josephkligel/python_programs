@@ -52,6 +52,19 @@ class App(Tk):
             fh.write(f'{database_dialog.name}\n')
         self.get_connection(database_dialog.name)
 
+    def old_get_connection(self, parent, database):#TODO: delete later
+        self.conn = sqlite3.Connection(database)
+        self.cursor = self.conn.cursor()
+        get_tables_statement = self.cursor.execute('SELECT name FROM sqlite_master WHERE type="table";')
+        tables = []
+        for name in get_tables_statement:
+            tables.append(name[0])
+        self.combobox.config(values=tables)
+        #try :
+           # self.combobox.bind('<<ComboboxSelected>>', lambda e: self.populate_table(self.tab2, self.table_name.get()))
+        #except sqlite3.OperationalError as oe:
+         #   print('Could not retrieve table name')
+
     def get_connection(self, database):
         self.db = Database(database)
         self.combobox.config(values=self.db.tables)            
