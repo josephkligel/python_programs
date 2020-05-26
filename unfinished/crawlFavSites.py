@@ -32,7 +32,7 @@ def getExternalLinks(url, count=10):
 
 if len(sys.argv) < 2:
     print('-'*10 + 'No arguments' + '-'*10)
-    url = str(input('Type string here (make sure to include schemes): '))
+    url = str(input('Type string here (make sure to include schemes/protocol): '))
     depth = int(input('How many links do you want to be found? '))
     getExternalLinks(url, count=depth)
 else:
