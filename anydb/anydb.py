@@ -39,14 +39,17 @@ class App(Tk):
         self.database_box = Text(parent, height=1)
         self.database_box.grid(row=0, column=0, padx=10, pady=10)
         openBtn = ttk.Button(parent, text='Choose Db')
-        openBtn.grid(row=0, column=1, padx=10, pady=10, sticky='e')
+        openBtn.grid(row=0, column=1, sticky='e', padx=10)
         openBtn.config(command=self.choose_file)
 
         self.table_var = StringVar()
         self.combobox = ttk.Combobox(parent, textvariable=self.table_var)
-        self.combobox.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky='we')
+        self.combobox.grid(row=1, column=0, padx=10, pady=10, sticky='we')
+        self.table_label = Label(parent, text='Choose Table')
+        self.table_label.grid(row=1, column=1)
+
         self.populate_button = ttk.Button(parent, text='Populate Table',  command=lambda: self.populate_table(self.tab2, self.table_var.get()))
-        self.populate_button.grid(row=2, column=1, padx=10, pady=10, sticky='e')
+        self.populate_button.grid(row=2, column=1, padx=10, sticky='e')
 
     def choose_file(self):
         database_dialog = filedialog.askopenfile(initialdir='./')
@@ -94,11 +97,11 @@ class App(Tk):
             self.refresh(parent)
             
         deleteBtn = ttk.Button(parent, text='Delete', command=lambda: call_crud_vars(self.db.delete_data))
-        deleteBtn.grid(row=row+1, column=i-2, sticky='e')
+        deleteBtn.grid(row=row+1, column=i-2, sticky='e', pady=10)
         updateBtn = ttk.Button(parent, text='Update', command=lambda: call_crud_vars(self.db.update_data))
-        updateBtn.grid(row=row+1, column=i-1, stick='e')
+        updateBtn.grid(row=row+1, column=i-1, stick='e', pady=10)
         insertBtn = ttk.Button(parent, text='Insert', command=lambda: call_crud_vars(self.db.insert_data))
-        insertBtn.grid(row=row+1, column=i, sticky='e')
+        insertBtn.grid(row=row+1, column=i, sticky='e', pady=10)
 
         self.notebook.select(1)
 

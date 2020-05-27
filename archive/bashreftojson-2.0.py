@@ -2,7 +2,7 @@
 import json
 import re
 
-filename = '/home/jkligel/Github/Programmapedia/bashref.txt'
+filename = '/home/jkligel/Github/Programmapedia/bashref.md'
 
 dict = {}
 
