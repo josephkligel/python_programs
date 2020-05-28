@@ -2,6 +2,7 @@ from tkinter import ttk
 from tkinter import Tk, Menu
 from tkinter import *
 import json
+import os
 
 with open('repos.json', 'r') as fr:
     repoDict = json.load(fr)
@@ -60,23 +61,24 @@ class App(Tk):
             label = ttk.Label(frame2, text=v +' repo' + ':')
             label.grid(row=row, column=column, sticky='e', padx=10)
 
-            if command == None:
-                command = f'git clone https://github.com/zigjag/{v}.git'
+            repo_cmd = f'git clone https://github.com/zigjag/{v}.git'
 
-            button = ttk.Button(frame2, text=button_text, command=lambda: self.system_command(command))
+            button = ttk.Button(frame2, text=button_text, command=lambda: os.system(repo_cmd))# TODO
             button.grid(row=row, column=column+1, pady=5)
             row += 1
-            if row == 10 or row == 20:
+            if row % 10 == 0:
                 row = 0
                 column += 2
 
-        def all():#Todo
-            frame2.event_generate('<ButtonPress>')# TODO: INSTALL ALL
+        def all():
+            for frame in frame2.winfo_children():
+                if 'button' in str(frame):
+                    frame.invoke()
 
         all_button.config(command=all)
 
-    def system_command(self, os=None):# TODO: Add a way to auto install programs for user
-        pass
+    def system_command(self, command):# TODO
+        os.system(command)
 
 if __name__ == '__main__':
 

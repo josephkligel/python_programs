@@ -15,11 +15,13 @@ def main(filename):
 		print(i)
 	return file_list
 
-def search(filename, relatedtext):
-	with open(filename) as fr:
-		for line in fr:
-			if relatedtext in line:
-				print(line)
+def search(file_list, relatedtext):
+	for file in file_list:
+		if os.path.isfile(file):
+			with open(file) as fr:
+				for line in fr:
+					if relatedtext in line:
+						print(line)
 
 if len(sys.argv) < 2:
 	file_name = str(input('What file are you looking for? '))
@@ -33,4 +35,5 @@ else:
 	file_name = args.file
 	file_list = main(file_name)
 	print()
-	search(file_list[0], args.search)
+	if args.search:
+		search(file_list, args.search)
