@@ -1,4 +1,7 @@
-import sys, argparse, re
+#!/usr/bin/env python
+import sys
+import argparse
+import re
 
 parser = argparse.ArgumentParser(description='Generate templates for html, python, bash, or C. Example: "python templates.py --html template.html"')
 parser.add_argument('--html', help='Create an html file template')
@@ -7,8 +10,8 @@ parser.add_argument('-c', '--cpro', help='Create a C programming template')
 parser.add_argument('-b', '--bash', help='Create a bash template')
 args = parser.parse_args()
 
-def create_template():
-    if sys.argv[2] == '':
+def main():
+    if sys.argv[2] != True:
         sys.argv[2] == 'generated_template'
     if args.html:
         with open(sys.argv[2] + '.html', 'w') as fh:
@@ -35,4 +38,5 @@ int main(int argc, int *argv[]){
         with open(sys.argv[2] + '.sh', 'w') as fh:
             fh.write("""#!/usr/bin/env bash""")
 
-create_template()
+if len(sys.argv) > 2:
+    main()
