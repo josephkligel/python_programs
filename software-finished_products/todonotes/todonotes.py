@@ -1,6 +1,9 @@
+#!/usr/bin/env python
+
 import json
 import sys, argparse
-import convert_to_md
+#sys.path.insert(1, '/home/jkligel/python_programs/todonotes/')
+from lib import convert_to_md
 
 parser = argparse.ArgumentParser(description='Todolist app')
 parser.add_argument('read', help='Read a note\'s title and body')
@@ -55,7 +58,6 @@ def removeNote(title): # No argument, just word found in sys.argsv
     else:
         print('Note does not exist')
 
-
 def updateNote(title, body): # No argument, just word found in sys.argsv
     notes = loadNotes() # Follows the same logic as the removeNote function
     updatedNotes = [note for note in notes if note['title'] != title]
@@ -76,7 +78,7 @@ def main():
             addNote(args.title, args.body)
         elif 'remove' == arg:
             removeNote(args.title)
-            convert_to_md.main()
+            convert_to_md.md()
         elif 'update' == arg:
             updateNote(args.title, args.body)
 

@@ -1,21 +1,24 @@
 #!/usr/bin/env python
 
 import json
-import sys, argparse
+import sys, os, argparse
 #sys.path.insert(1, '/home/jkligel/python_programs/todonotes/')
-from lib import convert_to_md
-from lib import *
+from lib import convert_data
 
 parser = argparse.ArgumentParser(description='Todolist app')
 parser.add_argument('read', help='Read a note\'s title and body')
 parser.add_argument('list', action='store_true', help='List all note titles')
+#parser.add_argument('add', action='store_true', help='Add a note')
+#parser.add_argument('remove', help='Remove a note')
+#parser.add_argument('update', help='update a note')
+
 parser.add_argument('--all', action='store_true', help='Option for list to list body of notes also.')
 parser.add_argument('--title', help='todoNotes.py add --title <title of note> --body <body of note>')
 parser.add_argument('--body', help='todoNotes.py add --title <title of note> --body of note')
 args = parser.parse_args()
 
 def loadNotes():
-    with open('/home/jkligel/python_programs/todonotes/lib/todo.json') as fh:
+    with open('/home/jkligel/python_programs/todonotes/todo.json') as fh: #TODO
         if fh != None:
             notes = json.load(fh)
             return notes
@@ -48,7 +51,13 @@ def addNote(title, body): # No argument, just word found in sys.argsv
         print('Added')
         json.dump(notes, open('todo.json', 'w'))
     else:
-        print('Note taken')
+        print('Note taken') #TODO
+        #boolean = str(input(f'Do you want to add this note to {title}?(y/n) '))
+        #if boolean == 'y':
+        #    for note in notes:
+        #        if note['title'] == title:
+        #            note['body'] = list(note['body'].values()).append(body)
+        #    print(notes)
 
 def removeNote(title): # No argument, just word found in sys.argsv
     notes = loadNotes()
@@ -79,8 +88,10 @@ def main():
             addNote(args.title, args.body)
         elif 'remove' == arg:
             removeNote(args.title)
-            convert_to_md.md()
         elif 'update' == arg:
             updateNote(args.title, args.body)
+    convert_data.md()
 
-main()
+if __name__ == '__main__':
+    main()
+
