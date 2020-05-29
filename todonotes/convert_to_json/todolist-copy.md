@@ -1,30 +1,29 @@
 # Current Bookmarks:
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
- Linkedin Learning Progress 	https://www.linkedin.com/learning/me/in-progress	
+ Linkedin Learning Progress	https://www.linkedin.com/learning/me/in-progress	
  AI-Python		6031
  Linux Complete Guide	601
  Bash Shell Scripting	108
- Nodejs Development	4019
-
+ Nodejs Development	5025
 # Shows/Movies
  Farscape		112
  IDOAG			204
 
 # Current Todos:
- -Tit USB
+ -Tit USB:
 	-backup Seagate
 	-backup fedora backups, videos folder
 	-backup windows
 	-backup 700 HDD
- -anydb.py
+ -anydb.py:
 	-add directions
 	-get entry text from selecting row
 	-table fill whole frame
- -Tetris
+ -Tetris:
 	-speed up after awhile
 	-fix block rotation at edge issue
 
 # Non-current Todos:
- BudgetCrud (look on todoist app for specifics)
- Unfinished folder
+ -BudgetCrud (look on todoist app for specifics)
+ -Unfinished folder
  
