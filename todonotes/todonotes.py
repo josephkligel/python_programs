@@ -2,7 +2,7 @@
 
 import json
 import sys, os, argparse
-#sys.path.insert(1, '/home/jkligel/python_programs/todonotes/')
+import simple_chalk as chalk
 from lib import convert_data
 
 parser = argparse.ArgumentParser(description='Todolist app')
@@ -30,28 +30,28 @@ def listNotes():
     notes = loadNotes()
     for note in notes:
         if args.all:
-            print(note['title'], note['body'], sep=': ')
+            print(chalk.bgBlue(f'{note["title"]}: {note["body"]}'))
         else:
-            print(note['title'])
+            print(chalk.bgBlue(note['title']))
 
 def readNote(title):
     notes = loadNotes()
     try:
         found = next(note for note in notes if note['title'] == title)
-        print(f'title: {found["title"]}')
-        print(f'body: {found["body"]}')
+        print(chalk.bgBlue(f'title: {found["title"]}'))
+        print(chalk.bgBlue(f'body: {found["body"]}'))
     except Exception:
-        print('Note not found')
+        print(chalk.bgRed('Note not found'))
 
 def addNote(title, body): # No argument, just word found in sys.argsv
     notes = loadNotes()
     found = [True for note in notes if note['title'] == title]
     if not found:
         notes.append({'title': title, 'body': body})
-        print('Added')
+        print(chalk.bgGreen('Added'))
         json.dump(notes, open('todo.json', 'w'))
     else:
-        print('Note taken') #TODO
+        print(chalk.bgRed('Note taken')) #TODO
         #boolean = str(input(f'Do you want to add this note to {title}?(y/n) '))
         #if boolean == 'y':
         #    for note in notes:
@@ -63,20 +63,20 @@ def removeNote(title): # No argument, just word found in sys.argsv
     notes = loadNotes()
     notesToKeep = [note for note in notes if note['title'] != title]
     if len(notesToKeep) < len(notes):
-        print('Removed note', title)
+        print(chalk.bgGreen(f'Removed note {title}'))
         json.dump(notesToKeep, open('todo.json', 'w'))
     else:
-        print('Note does not exist')
+        print(chalk.bgRed('Note does not exist'))
 
 def updateNote(title, body): # No argument, just word found in sys.argsv
     notes = loadNotes() # Follows the same logic as the removeNote function
     updatedNotes = [note for note in notes if note['title'] != title]
     if len(updatedNotes) < len(notes):
-        print('Updated note')
+        print(chalk.bgGreen('Updated note'))
         updatedNotes.append({'title': title, 'body': body})
         json.dump(updatedNotes, open('todo.json', 'w'))
     else:
-        print('Note does not exist')
+        print(chalk.bgRed('Note does not exist'))
 
 def main():
     for arg in sys.argv:

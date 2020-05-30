@@ -1,10 +1,10 @@
 # Current Bookmarks:
  Udemy/Web-Development	https://www.udemy.com/home/my-courses/learning/
- Linkedin Learning Progress	https://www.linkedin.com/learning/me/in-progress	
+ Linkedin Learning Progress https://www.linkedin.com/learning/me/in-progress	
  AI-Python		6031
  Linux Complete Guide	601
  Bash Shell Scripting	108
- Nodejs Development	5025
+ Nodejs Development	5026
 # Shows/Movies
  Farscape		112
  IDOAG			204
@@ -22,6 +22,9 @@
  -Tetris:
 	-speed up after awhile
 	-fix block rotation at edge issue
+ -Python:
+	-Something
+	-Another thing
 
 # Non-current Todos:
  -BudgetCrud (look on todoist app for specifics)

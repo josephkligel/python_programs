@@ -4,8 +4,8 @@
         "title": "Udemy/Web-Development"
     },
     {
-        "body": "https://www.linkedin.com/learning/me/in-progress",
-        "title": "Linkedin Learning Progress"
+        "body": "",
+        "title": "Linkedin Learning Progress https://www.linkedin.com/learning/me/in-progress"
     },
     {
         "body": "6031",
@@ -20,7 +20,7 @@
         "title": "Bash Shell Scripting"
     },
     {
-        "body": "5025",
+        "body": "5026",
         "title": "Nodejs Development"
     },
     {
@@ -54,6 +54,13 @@
             "fix block rotation at edge issue"
         ],
         "title": "Tetris"
+    },
+    {
+        "body": [
+            "Something",
+            "Another thing"
+        ],
+        "title": "Python"
     },
     {
         "body": "BudgetCrud (look on todoist app for specifics)",
