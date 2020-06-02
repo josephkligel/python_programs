@@ -32,35 +32,9 @@
         ]
     },
     {
-        "title": "Tetris",
-        "body": [
-            "speed up after awhile",
-            "fix block rotation at edge issue"
-        ]
-    },
-    {
-        "title": "BudgetCrud (look on todoist app for specifics)",
-        "body": [
-            "BudgetCrud (look on todoist app for specifics)"
-        ]
-    },
-    {
-        "title": "Unfinished folder",
-        "body": [
-            "Unfinished folder"
-        ]
-    },
-    {
         "title": "IDOAG",
         "body": [
             "204"
-        ]
-    },
-    {
-        "title": "todonotes",
-        "body": [
-            "regex to read all matched notes",
-            "append new bodies to a list"
         ]
     },
     {
@@ -88,18 +62,18 @@
         ]
     },
     {
-        "title": "transactions",
-        "body": [
-            "Add transactions when pendings clear"
-        ]
-    },
-    {
         "title": "Tit USB",
         "body": [
             "backup Seagate",
             "backup fedora backups, videos folder",
             "backup windows",
             "backup 700 HDD"
+        ]
+    },
+    {
+        "title": "transactions.db with anydb",
+        "body": [
+            "Add records when pending transactions clear"
         ]
     }
 ]

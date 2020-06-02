@@ -15,21 +15,8 @@
  -get entry text from selecting row
  -table fill whole frame
 
-## Tetris
- -speed up after awhile
- -fix block rotation at edge issue
-
-## BudgetCrud (look on todoist app for specifics)
- -BudgetCrud (look on todoist app for specifics)
-
-## Unfinished folder
- -Unfinished folder
-
 ## IDOAG
  -204
-
-## todonotes
- -regex to read all matched notes
 
 ## Nodejs Development
  -6031 7:01
@@ -43,12 +30,12 @@
 ## electron
  -12
 
-## transactions
- -Add transactions when pendings clear
-
 ## Tit USB
  -backup Seagate
  -backup fedora backups, videos folder
  -backup windows
  -backup 700 HDD
+
+## transactions.db with anydb
+ -Add records when pending transactions clear
 

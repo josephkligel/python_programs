@@ -2,6 +2,7 @@
 
 import json
 import sys, os, argparse
+import re
 import simple_chalk as chalk
 from lib import convert_data
 from lib import convert_todo_md
@@ -41,7 +42,7 @@ def listNotes():
 def readNote(title):
     notes = loadNotes()
     try:
-        found = next(note for note in notes if note['title'] == title)
+        found = next(note for note in notes if re.compile(title).match(note['title']))
         print(chalk.bgBlue(f'title: {found["title"]}'))
         print(chalk.bgBlue(f'body: {", ".join(found["body"])}'))
     except Exception:
