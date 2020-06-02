@@ -56,12 +56,6 @@
         ]
     },
     {
-        "title": "electron",
-        "body": [
-            "12"
-        ]
-    },
-    {
         "title": "Tit USB",
         "body": [
             "backup Seagate",
@@ -74,6 +68,18 @@
         "title": "transactions.db with anydb",
         "body": [
             "Add records when pending transactions clear"
+        ]
+    },
+    {
+        "title": "electron",
+        "body": [
+            "18"
+        ]
+    },
+    {
+        "title": "videoinfo",
+        "body": [
+            "fix require in main window"
         ]
     }
 ]

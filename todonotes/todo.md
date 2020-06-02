@@ -27,9 +27,6 @@
 ## startrek
  -install react and setup components
 
-## electron
- -12
-
 ## Tit USB
  -backup Seagate
  -backup fedora backups, videos folder
@@ -38,4 +35,10 @@
 
 ## transactions.db with anydb
  -Add records when pending transactions clear
+
+## electron
+ -18
+
+## videoinfo
+ -fix require in main window
 
