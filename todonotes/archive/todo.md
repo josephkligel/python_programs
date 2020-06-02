@@ -1,3 +1,9 @@
+## Udemy/Web-Development
+ -https://www.udemy.com/home/my-courses/learning/
+
+## Linkedin Learning Progress
+ -https://www.linkedin.com/learning/me/in-progress
+
 ## AI-Python
  -6031
 
@@ -9,6 +15,12 @@
 
 ## Farscape
  -112
+
+## Tit USB
+ -backup Seagate
+ -backup fedora backups, videos folder
+ -backup windows
+ -backup 700 HDD
 
 ## anydb.py
  -add directions
@@ -30,25 +42,15 @@
 
 ## todonotes
  -regex to read all matched notes
+ -append new bodies to a list
+ -convert md to json and then list notes from conversion
+ -change todo alias to read todo.md instead
+ -fix pytodo alias
+ -pandas mtodo.json or md to sql
 
 ## Nodejs Development
  -6031 7:01
 
 ## Finance
  -51
-
-## startrek
- -install react and setup components
-
-## electron
- -12
-
-## transactions
- -Add transactions when pendings clear
-
-## Tit USB
- -backup Seagate
- -backup fedora backups, videos folder
- -backup windows
- -backup 700 HDD
 

@@ -21,11 +21,11 @@ class App(Tk):
         self.notebook.add(self.tab2, text='Tab 2')
         
         self.create_buttons(self.tab1)
-        if os.path.exists('./last_database.log'):
-            with open('./last_database.log', 'r') as fr:
-                last_database = fr.readline().strip()
-            self.database_box.insert(1.0, last_database)
-            self.get_connection(last_database)
+        #if os.path.exists('./last_database.log'):
+        #    with open('./last_database.log', 'r') as fr:
+        #        last_database = fr.readline().strip()
+        #    self.database_box.insert(1.0, last_database)
+        #    self.get_connection(last_database)
 
         #Last thing to do when initializing
         self.create_style()
