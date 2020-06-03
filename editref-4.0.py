@@ -41,7 +41,7 @@ def edit(num, indexcheck, data):
                         return system("vim %s" % (value["default"]))
 
 def add_to_lst(data):
-    textfile = input("Type name of textfile here, include extension: ")
+    textfile = input("Type name of textfile here (include extension): ")
     if textfile == '':
         print("\n---------Nothing added---------\n")
         main()
@@ -50,7 +50,7 @@ def add_to_lst(data):
         name, ext = textfile.split('.', 1)
         data[name.capitalize()] = {'file': textfile, 'default': text_location+'/'+textfile}
         with open('/home/jkligel/python_programs/reflist.json', 'w') as fh:
-            json.dump(data, fh)
+            json.dump(data, fh, indent=4)
         main()
 
 def search_for_file(pattern):
