@@ -10,11 +10,6 @@
 ## Farscape
  -112
 
-## anydb.py
- -add directions
- -get entry text from selecting row
- -table fill whole frame
-
 ## IDOAG
  -204
 
@@ -33,12 +28,7 @@
  -backup windows
  -backup 700 HDD
 
-## transactions.db with anydb
- -Add records when pending transactions clear
-
 ## electron
  -18
-
-## videoinfo
  -fix require in main window
 

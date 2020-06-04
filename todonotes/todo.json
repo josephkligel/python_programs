@@ -24,14 +24,6 @@
         ]
     },
     {
-        "title": "anydb.py",
-        "body": [
-            "add directions",
-            "get entry text from selecting row",
-            "table fill whole frame"
-        ]
-    },
-    {
         "title": "IDOAG",
         "body": [
             "204"
@@ -65,20 +57,9 @@
         ]
     },
     {
-        "title": "transactions.db with anydb",
-        "body": [
-            "Add records when pending transactions clear"
-        ]
-    },
-    {
         "title": "electron",
         "body": [
-            "18"
-        ]
-    },
-    {
-        "title": "videoinfo",
-        "body": [
+            "18",
             "fix require in main window"
         ]
     }

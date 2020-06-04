@@ -1,6 +1,6 @@
 from tkinter import Tk, StringVar, VERTICAL 
 from tkinter import Label, Text, Entry, Canvas
-from tkinter import Menu, filedialog
+from tkinter import Menu, filedialog, messagebox
 from tkinter import ttk
 from glob import iglob
 import os
@@ -12,9 +12,10 @@ class App(Tk):
         super(App, self).__init__()
         self.title = 'Database Manager'
         self.geometry = '640x480+200+200'
+        self.create_menu()
         
         self.notebook = ttk.Notebook(self)
-        self.notebook.pack()
+        self.notebook.pack(fill='both', expand=True)
         self.tab1 = ttk.Frame(self.notebook)
         self.tab2 = Canvas(self.notebook)
         self.notebook.add(self.tab1, text='Tab 1')
@@ -35,8 +36,22 @@ class App(Tk):
     
     def create_menu(self):
         menubar = Menu(self)
-        filemenu = Menu(menubar)
         self.config(menu=menubar)
+        filemenu = Menu(menubar)
+        helpmenu = Menu(menubar)
+        
+        menubar.add_cascade(menu=filemenu, label='File')
+        menubar.add_cascade(menu=helpmenu, label='Help')
+        def direction_dialog():
+            messagebox.showinfo(title='Directions', message="""1. Open a database
+2. Select a table
+3. Press "Populate Table" button
+
+For records:
+1. Fill in rows to add a record, or just fill in id to delete or update
+2. Press delete, update, or insert button
+""")
+        helpmenu.add_command(label='Directions', command=direction_dialog)
 
     def create_buttons(self, parent):
         self.database_box = Text(parent, height=1)
@@ -48,7 +63,7 @@ class App(Tk):
         self.table_var = StringVar()
         self.combobox = ttk.Combobox(parent, textvariable=self.table_var)
         self.combobox.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky='we')
-        self.populate_button = ttk.Button(parent, text='Populate Table',  command=lambda: self.populate_table(self.tab2, self.table_var.get()))
+        self.populate_button = ttk.Button(parent, text='Populate Table', command=lambda: self.populate_table(self.tab2, self.table_var.get()))
         self.populate_button.grid(row=2, column=1, padx=10, pady=10, sticky='e')
 
     def choose_file(self):
