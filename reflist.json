@@ -31,7 +31,7 @@
     },
     "Nodejs Reference": {
         "file": "noderef.md",
-        "default": "/home/$USER/Github/Programmapedia/noderef.md",
+        "default": "/home/$USER/Github/Programmapedia/JSGuides/noderef.md",
         "arg": "node"
     },
     "Python Index": {

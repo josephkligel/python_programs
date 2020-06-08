@@ -13,9 +13,6 @@
 ## IDOAG
  -204
 
-## Nodejs Development
- -6031 7:01
-
 ## Finance
  -51
 
@@ -31,4 +28,7 @@
 ## electron
  -18
  -fix require in main window
+
+## Nodejs Development
+ -6032 6:00
 
