@@ -29,3 +29,8 @@
  -18
  -fix require in main window
 
+## git
+ -AI
+ -finance_py
+ -simonSaysGame
+
