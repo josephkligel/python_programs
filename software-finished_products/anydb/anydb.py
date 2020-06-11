@@ -63,11 +63,13 @@ For records:
         self.table_var = StringVar()
         self.combobox = ttk.Combobox(parent, textvariable=self.table_var)
         self.combobox.grid(row=1, column=0, columnspan=2, padx=10, pady=10, sticky='we')
-        self.populate_button = ttk.Button(parent, text='Populate Table', command=lambda: self.populate_table(self.tab2, self.table_var.get()))
+        #self.populate_button = ttk.Button(parent, text='Populate Table', command=lambda: self.populate_table(self.tab2, self.table_var.get()))
+        self.populate_button = ttk.Button(parent, text='Populate Table', command=lambda: self.refresh(self.tab2))
         self.populate_button.grid(row=2, column=1, padx=10, pady=10, sticky='e')
 
     def choose_file(self):
         database_dialog = filedialog.askopenfile(initialdir='./')
+        self.database_box.delete('1.0', 'end')
         self.database_box.insert(1.0, database_dialog.name)
         with open('last_database.log', 'w') as fh:
             fh.write(f'{database_dialog.name}\n')
