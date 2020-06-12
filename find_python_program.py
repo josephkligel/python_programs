@@ -10,7 +10,7 @@ parser.add_argument('-s', '--search', help='python find_python_program.py -f <fi
 args = parser.parse_args()
 
 def main(filename):
-	file_list = [found_file for found_file in glob.glob(f'/home/jkligel/python_programs/**/*{file_name}', recursive=True)]
+	file_list = [found_file for found_file in glob.glob(f'./**/*{file_name}', recursive=True)] # replaced '/home/jkligel/python_programs/**/*{filename} with current directory to look through.'
 	for i in file_list:
 		print(i)
 	return file_list
