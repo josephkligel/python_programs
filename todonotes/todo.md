@@ -32,7 +32,6 @@
 ## git
  -Head_First_Projects: fix it
  -AI
- -finance_py
 
 ## Workflow
  -401
