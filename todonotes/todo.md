@@ -29,10 +29,6 @@
  -18
  -fix require in main window
 
-## git
- -Head_First_Projects: fix it
- -AI
-
 ## Workflow
  -401
 
