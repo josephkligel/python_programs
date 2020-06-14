@@ -32,7 +32,7 @@ def main():
         with open(sys.argv[2] + '.c', 'w') as fh:
             fh.write("""#include <stdio.h>\n
 int main(int argc, int *argv[]){
-\n\treturn(0)
+\n\treturn(0);
 }""")
     elif args.bash:
         with open(sys.argv[2] + '.sh', 'w') as fh:
