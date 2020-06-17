@@ -95,5 +95,9 @@
     "Itertools": {
         "file": "itertools.md",
         "default": "/home/jkligel/Github/Programmapedia/PyGuides/itertools.md"
+    },
+    "Deployment": {
+        "file": "deployment.md",
+        "default": "/home/jkligel/Github/Programmapedia/deployment.md"
     }
 }
