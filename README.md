@@ -19,6 +19,8 @@ editref-4.0.py: Lists reference guides to edit. The reference guides contain hel
 
 filetree-2.0.py: File explorer in a Gui treeview mode. It allows you to open/view, copy, move, delete, or rename a file or folder.
 
+find_a_file.py: Command line tool that finds a file and writes the location of the file to a json file. 
+
 find_python_program.py: Command line tool to find one of the python programs listed in this table of contents and search its text for a specific phrase or string.
 
 gitPushAll.py: Command line tool to automatically push git changes to Github, saving all working progress in the directory it is called. Requires git to be already installed.
@@ -30,6 +32,8 @@ picksite.py: Choose from list of sites to go to and bash will open the website.
 picksite-v2.py: Type what site you would like to go to and bash will go site, as long as site in the websites list
 
 program_run.py: Runs one of three programs already installed on the computer. It is merely a convienent way to run programs locally installed instead of from the usual system installed directories.
+
+program_run.py: Gives a selection of programs to run and runs the program selected. The programs are populated in the found_files.json file from the find_a_file program.
 
 table_of_contents.py Choose what table-of-contents text to edit and open it. The table of contents texts are like this list in which they contain a listing of programs I made.
 
