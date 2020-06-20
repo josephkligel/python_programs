@@ -7,12 +7,6 @@
 ## Bash Shell Scripting
  -108
 
-## Farscape
- -112
-
-## IDOAG
- -204
-
 ## Finance
  -51
 
@@ -31,4 +25,10 @@
 
 ## Workflow
  -401
+
+## Advanced Web Development
+ -201
+
+## C++
+ -101
 

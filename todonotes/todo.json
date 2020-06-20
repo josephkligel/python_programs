@@ -18,18 +18,6 @@
         ]
     },
     {
-        "title": "Farscape",
-        "body": [
-            "112"
-        ]
-    },
-    {
-        "title": "IDOAG",
-        "body": [
-            "204"
-        ]
-    },
-    {
         "title": "Finance",
         "body": [
             "51"
@@ -61,6 +49,18 @@
         "title": "Workflow",
         "body": [
             "401"
+        ]
+    },
+    {
+        "title": "Advanced Web Development",
+        "body": [
+            "201"
+        ]
+    },
+    {
+        "title": "C++",
+        "body": [
+            "101"
         ]
     }
 ]

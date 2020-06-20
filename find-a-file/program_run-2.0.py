@@ -1,8 +1,12 @@
 import json
 import os, sys
-from find_a_file import find
+from lib.find_a_file import find
 
-found_dict = json.load(open('found_files.json', 'r'))
+found_json = open(os.path.join(os.path.dirname(__file__), 'lib/found_files.json'))
+found_dict = json.load(found_json)
+
+found_json.close()
+
 enumeratedDict = {}
 
 print("What program would you like to open?")
