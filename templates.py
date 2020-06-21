@@ -52,4 +52,4 @@ int main(){
 if len(sys.argv) > 2:
     main()
 else:
-   os.system('templates.py --help') 
+    os.system(f'python {__file__} --help') 
