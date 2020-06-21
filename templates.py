@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-import sys
+import sys, os
 import argparse
 import re
 
@@ -7,6 +7,7 @@ parser = argparse.ArgumentParser(description='Generate templates for html, pytho
 parser.add_argument('--html', help='Create an html file template')
 parser.add_argument('-p', '--python', help='Create a python file template')
 parser.add_argument('-c', '--cpro', help='Create a C programming template')
+parser.add_argument('-c++', '--cpp', help='Create a C++ program template')
 parser.add_argument('-b', '--bash', help='Create a bash template')
 args = parser.parse_args()
 
@@ -30,9 +31,19 @@ def main():
             fh.write('#!/usr/bin/env python')
     elif args.cpro:
         with open(sys.argv[2] + '.c', 'w') as fh:
-            fh.write("""#include <stdio.h>\n
+            fh.write("""#include <stdio.h>
+
 int main(int argc, int *argv[]){
-\n\treturn(0);
+
+    return(0);
+}""")
+    elif args.cpp:
+        with open(sys.argv[2] + '.cpp', 'w') as fh:
+            fh.write("""#include <iostream>
+
+int main(){
+
+    return 0;
 }""")
     elif args.bash:
         with open(sys.argv[2] + '.sh', 'w') as fh:
@@ -40,3 +51,5 @@ int main(int argc, int *argv[]){
 
 if len(sys.argv) > 2:
     main()
+else:
+   os.system('templates.py --help') 

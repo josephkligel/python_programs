@@ -9,6 +9,8 @@ calc.py: Command-line calculator for basic math calculations, e.g. add, subtract
 
 caesarcipher.py: Simple program that alters a message with a Caesar cipher.
 
+compileC++.py: Compiles a C++ program with g++ in Linux and runs the program
+
 computerinfo.py: Prints computer specifications to the console, such as the version of Python installed on computer, computer's cpu architecture, operating system version, and a slew of other useful specifications about the machine it is used on.
 
 copyFiles.py: Command line tool to program files and/or folders to different locations.
@@ -37,7 +39,7 @@ program_run.py: Gives a selection of programs to run and runs the program select
 
 table_of_contents.py Choose what table-of-contents text to edit and open it. The table of contents texts are like this list in which they contain a listing of programs I made.
 
-templates.py: Creates boiler-plate templates in html, C programming, Python, and Bash shell
+templates.py: Creates boiler-plate templates in html, C/C++ programming, Python, and Bash shell
 
 time.py: Displays the current time and date on the console.
 
