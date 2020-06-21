@@ -14,6 +14,11 @@
         "default": "/home/$USER/Github/Programmapedia/cref.md",
         "arg": "c"
     },
+    "C++ Reference": {
+    	"file": "cppref.md",
+	"default": "/home/$USER/Github/Programmapedia/cppref.md",
+	"arg": "cpp"
+    },
     "CSS Reference": {
         "file": "cssref.md",
         "default": "/home/$USER/Github/Programmapedia/cssref.md",
@@ -29,20 +34,20 @@
         "default": "/home/$USER/Github/Programmapedia/htmlref.md",
         "arg": "html"
     },
-    "Nodejs Reference": {
-        "file": "noderef.md",
-        "default": "/home/$USER/Github/Programmapedia/JSGuides/noderef.md",
-        "arg": "node"
-    },
-    "Python Index": {
-        "file": "pyIndex.md",
-        "default": "/home/$USER/Github/Programmapedia/pyIndex.md",
-        "arg": "py"
-    },
     "JavaScript Reference": {
         "file": "jsref.md",
         "default": "/home/$USER/Github/Programmapedia/jsref.md",
         "arg": "js"
+    },
+   "Python Index": {
+        "file": "pyIndex.md",
+        "default": "/home/$USER/Github/Programmapedia/pyIndex.md",
+        "arg": "py"
+    },
+    "Nodejs Reference": {
+        "file": "noderef.md",
+        "default": "/home/$USER/Github/Programmapedia/JSGuides/noderef.md",
+        "arg": "node"
     },
     "Pandas": {
         "file": "pandas.md",
