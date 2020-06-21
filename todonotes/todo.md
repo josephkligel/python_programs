@@ -29,6 +29,3 @@
 ## Advanced Web Development
  -201
 
-## C++
- -101
-
