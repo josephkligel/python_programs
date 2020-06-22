@@ -19,7 +19,7 @@ num = int(input("\nType number here: "))
 for k, v in enumeratedDict.items():
     if num == 0:
         search_file = input(str('What file are you looking for (type only name and extension)? '))
-        find(search_file) # no startDir was added. It will look in /home/jkligel directoriy
+        find(search_file) # no startDir was added. It will look in /home/jkligel directory
         sys.exit()
     elif num == int(k):
         os.system(f'{v[1]}')
