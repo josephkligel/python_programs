@@ -27,6 +27,8 @@ find_python_program.py: Command line tool to find one of the python programs lis
 
 gitPushAll.py: Command line tool to automatically push git changes to Github, saving all working progress in the directory it is called. Requires git to be already installed.
 
+gitpy.py: Command line tool to push and pull all git directories in a Linux setting. Cannot git push. Use gitPushAll.py for pushing. gitpy includes a program, extractRepos.py, that pulls the repository names from the Zigjag github page.
+
 listFiles.py: Commaned line tool to list files in a specified directory.
 
 picksite.py: Choose from list of sites to go to and bash will open the website.
