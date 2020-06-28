@@ -35,15 +35,19 @@ def main():
 
 int main(int argc, int *argv[]){
 
-    return(0);
+
+\treturn(0);
 }""")
     elif args.cpp:
         with open(sys.argv[2] + '.cpp', 'w') as fh:
             fh.write("""#include <iostream>
 
-int main(){
+using namespace std;
 
-    return 0;
+int main(int argc, char *argv[]){
+
+
+\treturn 0;
 }""")
     elif args.bash:
         with open(sys.argv[2] + '.sh', 'w') as fh:

@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os, platform
 
 print('-'*10 + 'System Info' + '-'*10)
@@ -17,6 +18,7 @@ print()
 print('-'*10 + 'Session Info' + '-'*10)
 print('Home Directory:', os.environ.get('HOME'))
 print('Shell Directory:', os.environ.get('SHELL'))
-print('Logname, Username:', os.environ.get('USERNAME') + ', ' + os.environ.get('LOGNAME'))
+print('Logname:', os.environ.get('LOGNAME'))
+print('Username:', os.environ.get('USER'))
 print('Hostname:', os.environ.get('HOSTNAME'))
 print('Desktop Session:', os.environ.get('DESKTOP_SESSION'))

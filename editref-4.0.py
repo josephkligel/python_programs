@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+import os
 from os import system, walk, path
 import json
 import fnmatch
@@ -16,7 +17,7 @@ def selection():
   print("\t0: Add new text")
 
   i = 1
-  with open('/home/jkligel/python_programs/reflist.json', 'r') as fh:
+  with open(os.path.join(os.path.dirname(__file__), 'reflist.json'), 'r') as fh:
       data = json.load(fh)
       for k,v in data.items():
           indexcheck[i] = k

@@ -6,6 +6,7 @@ import simple_chalk as chalk
 parser = argparse.ArgumentParser(description='Command line tool to apply git commands to all Zigjag git repositories listed on Github.')
 parser.add_argument('-c', '--clone', action='store_true', help='python gitpy.py --clone')
 parser.add_argument('-p', '--pull', action='store_true', help='python gitpy.py --pull')
+parser.add_argument('-pu', '--push', action='store_true', help='python gitpy.py --push')
 args = parser.parse_args()
 
 with open(os.path.join(os.path.dirname(__file__), 'lib/repoList.json')) as fh:
@@ -21,7 +22,11 @@ def gitTask(command):
             os.system(f'git clone {url}')
     elif args.pull:
         print(f'=========== Pull All Git Repos in home-user directory============')
-        os.system('sudo find /home/$USER -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;')
+        os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} pull \;')
+    elif args.push:
+        print(f'================= Push All Git Repos =============')
+        os.system("git config --global credential.helper 'cache --timeout 7200'")
+        os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
 
 if len(sys.argv) > 1:
     gitTask(sys.argv[1])
