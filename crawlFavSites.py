@@ -1,6 +1,4 @@
-from urllib.request import urlopen
 import requests
-from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 import lxml
 import argparse
