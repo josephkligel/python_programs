@@ -9,7 +9,7 @@ parser.add_argument('-p', '--pull', action='store_true', help='python gitpy.py -
 parser.add_argument('-pu', '--push', action='store_true', help='python gitpy.py --push')
 args = parser.parse_args()
 
-with open(os.path.join(os.path.dirname(__file__), 'lib/repoList.json')) as fh:
+with open(os.path.join(os.path.dirname(__file__), 'lib/remoteRepoList.json')) as fh:
     repoDict = json.load(fh)
 
 gitCommands = ['clone', 'pull']
@@ -26,7 +26,10 @@ def gitTask(command):
     elif args.push:
         print(f'================= Push All Git Repos =============')
         os.system("git config --global credential.helper 'cache --timeout 7200'")
-        os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
+        localRepoList = json.load(open(os.path.join(os.path.dirname(__file__), 'lib/localRepoList.json')))
+        for value in localRepoList.values():
+            os.system(f'git -C {value} add -a; git -C {value} commit -m "gitpy to your rescue"; git -C {value} push')
+        #os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
 
 if len(sys.argv) > 1:
     gitTask(sys.argv[1])
