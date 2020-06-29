@@ -28,7 +28,7 @@ def gitTask(command):
         os.system("git config --global credential.helper 'cache --timeout 7200'")
         localRepoList = json.load(open(os.path.join(os.path.dirname(__file__), 'lib/localRepoList.json')))
         for value in localRepoList.values():
-            os.system(f'git -C {value} add -a; git -C {value} commit -m "gitpy to your rescue"; git -C {value} push')
+            os.system(f'sudo git -C {value} add .; git -C {value} commit -m "gitpy to your rescue"; git -C {value} push')
         #os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
 
 if len(sys.argv) > 1:
