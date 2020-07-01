@@ -13,7 +13,7 @@ def getRepos():
     return repoList
 
 def writeToJson(repoList):
-    with open('repoList.json', 'w') as fh:
+    with open('remoteRepoList.json', 'w') as fh:
         repoDict = {i:f'https://github.com/zigjag/{i}.git' for i in repoList}
 
         print('Writing repolist to json file...')
