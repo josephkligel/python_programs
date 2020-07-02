@@ -23,7 +23,7 @@ args = parser.parse_args()
 
 def loadNotes():
     convert_todo_md.main() # converts todo.md to todo.json
-    with open('/home/jkligel/python_programs/todonotes/todo.json') as fh:
+    with open(os.path.join(os.path.dirname(__file__), 'todo.json'), 'r') as fh:
         if fh != None:
             notes = json.load(fh)
             return notes
