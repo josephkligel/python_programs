@@ -2,7 +2,10 @@ import json
 import os
 import simple_chalk as chalk
 
-def json_to_md(src='todo.json', clone='todo.md'):
+todo_json = os.path.abspath(os.path.join(os.path.dirname(__file__), '../todo.json'))
+todo_md = os.path.abspath(os.path.join(os.path.dirname(__file__), '../todo.md'))
+
+def json_to_md(src=todo_json, clone=todo_md):
     with open(src) as fr:
         todoData = json.load(fr)
         with open(clone, 'w') as fh:
@@ -15,7 +18,7 @@ def json_to_md(src='todo.json', clone='todo.md'):
                 else:
                     fh.write(f"* {note['body']}\n\n")
 
-def md_to_json(src='todo.md', clone='todo.json'):
+def md_to_json(src=todo_md, clone=todo_json):
     with open(src) as fr:
         notes = []
         note = {}
