@@ -50,7 +50,7 @@ def add_to_lst(data):
         text_location = input("Type file location only here, no ending slash or file name: ")
         name, ext = textfile.split('.', 1)
         data[name.capitalize()] = {'file': textfile, 'default': text_location+'/'+textfile}
-        with open('/home/jkligel/python_programs/reflist.json', 'w') as fh:
+        with open(os.path.join(os.path.dirname(__file__), 'reflist.json'), 'w') as fh:
             json.dump(data, fh, indent=4)
         main()
 
@@ -69,7 +69,7 @@ def search_for_file(pattern):
 if len(sys.argv) < 2:
     main()
 else:
-    with open('/home/jkligel/python_programs/reflist.json') as fh:
+    with open(os.path.join(os.path.dirname(__file__), 'reflist.json')) as fh:
         datalist = json.load(fh)
     argument = sys.argv[1]
 

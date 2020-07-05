@@ -15,9 +15,9 @@
         "arg": "c"
     },
     "C++ Reference": {
-    	"file": "cppref.md",
-	"default": "/home/$USER/Github/Programmapedia/cppref.md",
-	"arg": "cpp"
+        "file": "cppref.md",
+        "default": "/home/$USER/Github/Programmapedia/cppref.md",
+        "arg": "cpp"
     },
     "CSS Reference": {
         "file": "cssref.md",
@@ -39,7 +39,7 @@
         "default": "/home/$USER/Github/Programmapedia/jsref.md",
         "arg": "js"
     },
-   "Python Index": {
+    "Python Index": {
         "file": "pyIndex.md",
         "default": "/home/$USER/Github/Programmapedia/pyIndex.md",
         "arg": "py"
@@ -104,5 +104,9 @@
     "Deployment": {
         "file": "deployment.md",
         "default": "/home/jkligel/Github/Programmapedia/deployment.md"
+    },
+    "React_course": {
+        "file": "react_course.md",
+        "default": "/home/jkligel/Github/Programmapedia/JSGuides/react_course.md"
     }
 }
