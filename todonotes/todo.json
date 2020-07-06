@@ -48,18 +48,6 @@
         ]
     },
     {
-        "title": "BudgetCrud (look on todoist app for specifics)",
-        "body": [
-            "BudgetCrud (look on todoist app for specifics)"
-        ]
-    },
-    {
-        "title": "Unfinished folder",
-        "body": [
-            "Unfinished folder"
-        ]
-    },
-    {
         "title": "IDOAG",
         "body": [
             "204"
@@ -74,12 +62,6 @@
             "change todo alias to read todo.md instead",
             "fix pytodo alias",
             "pandas mtodo.json or md to sql"
-        ]
-    },
-    {
-        "title": "Nodejs Development",
-        "body": [
-            "6031 7:01"
         ]
     },
     {
@@ -105,12 +87,6 @@
         "body": [
             "Add transactions when pendings clear",
             "Get Sum"
-        ]
-    },
-    {
-        "title": "example",
-        "body": [
-            "123"
         ]
     }
 ]

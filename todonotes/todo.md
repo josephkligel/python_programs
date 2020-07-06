@@ -25,12 +25,6 @@
 * speed up after awhile
 * fix block rotation at edge issue
 
-## BudgetCrud (look on todoist app for specifics)
-* BudgetCrud (look on todoist app for specifics)
-
-## Unfinished folder
-* Unfinished folder
-
 ## IDOAG
 * 204
 
@@ -41,9 +35,6 @@
 * change todo alias to read todo.md instead
 * fix pytodo alias
 * pandas mtodo.json or md to sql
-
-## Nodejs Development
-* 6031 7:01
 
 ## Finance
 * 51
@@ -57,7 +48,4 @@
 ## transactions
 * Add transactions when pendings clear
 * Get Sum
-
-## example
-* 123
 
