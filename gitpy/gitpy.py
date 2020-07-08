@@ -27,7 +27,8 @@ def gitTask(command):
         print(f'================= Push All Git Repos =============')
         os.system("git config --global credential.helper 'cache --timeout 7200'")
         localRepoList = json.load(open(os.path.join(os.path.dirname(__file__), 'lib/localRepoList.json')))
-        for value in localRepoList.values():
+        for item, value in localRepoList.items():
+            print(f'>>>>>>> {item} <<<<<<<')
             os.system(f'sudo git -C {value} add .; git -C {value} commit -m "gitpy to your rescue"; git -C {value} push')
         #os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
 
