@@ -24,15 +24,6 @@
         ]
     },
     {
-        "title": "Tit USB",
-        "body": [
-            "backup Seagate",
-            "backup fedora backups, videos folder",
-            "backup windows",
-            "backup 700 HDD"
-        ]
-    },
-    {
         "title": "anydb.py",
         "body": [
             "add directions",
@@ -51,17 +42,6 @@
         "title": "IDOAG",
         "body": [
             "204"
-        ]
-    },
-    {
-        "title": "todonotes",
-        "body": [
-            "regex to read all matched notes",
-            "append new bodies to a list",
-            "convert md to json and then list notes from conversion",
-            "change todo alias to read todo.md instead",
-            "fix pytodo alias",
-            "pandas mtodo.json or md to sql"
         ]
     },
     {
@@ -87,6 +67,14 @@
         "body": [
             "Add transactions when pendings clear",
             "Get Sum"
+        ]
+    },
+    {
+        "title": "todonotes",
+        "body": [
+            "remove item function and command",
+            "convert md to json and then list notes from conversion",
+            "pandas todo.json to sql"
         ]
     }
 ]
