@@ -12,8 +12,6 @@ args = parser.parse_args()
 with open(os.path.join(os.path.dirname(__file__), 'lib/remoteRepoList.json')) as fh:
     repoDict = json.load(fh)
 
-gitCommands = ['clone', 'pull']
-
 def gitTask(command):
     if args.clone:
         for repo, url in repoDict.items():
