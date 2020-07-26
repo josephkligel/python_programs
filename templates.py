@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 import sys, os
 import argparse
 import re
@@ -8,8 +8,15 @@ parser.add_argument('--html', help='Create an html file template')
 parser.add_argument('-p', '--python', help='Create a python file template')
 parser.add_argument('-c', '--cpro', help='Create a C programming template')
 parser.add_argument('-c++', '--cpp', help='Create a C++ program template')
+parser.add_argument('--open', action='store_true', help="Open file with vim after creating")
 parser.add_argument('-b', '--bash', help='Create a bash template')
 args = parser.parse_args()
+
+def open_file(file, editor='vim'):
+    if args.open:
+        os.system(f'{editor} {file}')
+    else:
+        return
 
 def main():
     if sys.argv[2] != True:
@@ -26,9 +33,11 @@ def main():
     
   </body>
 </html>""")
+            open_file(fh.name)
     elif args.python:
         with open(sys.argv[2] + '.py', 'w') as fh:
-            fh.write('#!/usr/bin/env python')
+            fh.write('#!/usr/bin/python3')
+            open_file(fh.name)
     elif args.cpro:
         with open(sys.argv[2] + '.c', 'w') as fh:
             fh.write("""#include <stdio.h>
@@ -41,17 +50,18 @@ int main(int argc, int *argv[]){
     elif args.cpp:
         with open(sys.argv[2] + '.cpp', 'w') as fh:
             fh.write("""#include <iostream>
-
 using namespace std;
 
-int main(int argc, char *argv[]){
+int main(){
 
 
 \treturn 0;
 }""")
+        open_file(fh.name)
     elif args.bash:
         with open(sys.argv[2] + '.sh', 'w') as fh:
             fh.write("""#!/usr/bin/env bash""")
+            open_file(fh.name)
 
 if len(sys.argv) > 2:
     main()
