@@ -2,7 +2,8 @@ import os
 import glob
 import json
 
-def find_git(search_dir='/home/jkligel/Github'):
+home_dir = f'{os.path.expandvars("$HOME")}/Github'
+def find_git(search_dir=home_dir):
     localRepoList = {}
     for file in glob.iglob(f'{search_dir}/**/.git', recursive=True):
         localRepoList[os.path.basename(os.path.dirname(file)).capitalize()] = os.path.dirname(file)
@@ -23,7 +24,8 @@ def write_local_list(repoDict):
         json.dump(repoDict, fh, indent=4)   
     
 def main():
-    repoDict = find_git('/home/joseph/Github')
+    repoDict = find_git()
+    print(repoDict)
     write_bash_script(repoDict)
     write_local_list(repoDict)
 
