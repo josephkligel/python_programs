@@ -12,11 +12,17 @@ def getRepos():
     repoList = [i.getText().strip() for i in soup.select('#user-repositories-list > ul > li > div.col-10.col-lg-9.d-inline-block > div.d-inline-block.mb-1 > h3 > a')]
     return repoList
 
-def writeToJson(repoList):
-    with open('remoteRepoList.json', 'w') as fh:
-        repoDict = {i:f'https://github.com/zigjag/{i}.git' for i in repoList}
+def writeToJson(repoList=gitRepos()):
+    with open('remoteRepoList.json') as fr:
+        repoDict = json.load(fr)
 
-        print('Writing repolist to json file...')
+    with open('remoteRepoList.json', 'w') as fh:
+        for i in repoList:
+            if i not in repoDict:
+                print(f'Adding {i} repo to repoDict')
+                repoDict[i] = f'https://github.com/zigjag/{i}.git' 
+
+        print('Writing a list of repos to json file...')
         json.dump(repoDict, fh, indent=4)
     print('Done writing. Exiting...')
 

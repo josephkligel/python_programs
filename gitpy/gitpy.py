@@ -2,6 +2,7 @@ import json
 import os
 import sys, argparse
 import simple_chalk as chalk
+from lib import gitList
 
 parser = argparse.ArgumentParser(description='Command line tool to apply git commands to all Zigjag git repositories listed on Github.')
 parser.add_argument('-c', '--clone', action='store_true', help='python gitpy.py --clone')
@@ -28,9 +29,9 @@ def gitTask(command):
         for item, value in localRepoList.items():
             print(f'\n>>>>>>> {item} <<<<<<<')
             os.system(f'git -C {value} add .; git -C {value} commit -m "gitpy to your rescue"; git -C {value} push')
-        #os.system('sudo find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} push \;')
 
 if len(sys.argv) > 1:
+    gitList.main()
     gitTask(sys.argv[1])
 else:
     print(chalk.bgRed('Not enough arguments'))

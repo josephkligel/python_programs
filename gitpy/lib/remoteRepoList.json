@@ -27,5 +27,7 @@
     "web-development": "https://github.com/zigjag/web-development.git",
     "websites": "https://github.com/zigjag/websites.git",
     "java-programs": "https://github.com/zigjag/java-programs.git",
-    "vba": "https://github.com/zigjag/vba.git"
+    "vba": "https://github.com/zigjag/vba.git",
+    "chat-app": "https://github.com/zigjag/chat-app.git",
+    "config": "https://github.com/zigjag/config.git"
 }
