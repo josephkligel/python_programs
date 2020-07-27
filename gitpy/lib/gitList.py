@@ -25,7 +25,6 @@ def write_local_list(repoDict):
     
 def main():
     repoDict = find_git()
-    print(repoDict)
     write_bash_script(repoDict)
     write_local_list(repoDict)
 
