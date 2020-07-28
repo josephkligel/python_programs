@@ -21,7 +21,7 @@ def gitTask(command):
             os.system(f'git clone {url}')
     elif args.pull:
         print(f'=========== Pull All Git Repos in home-user directory============')
-        os.system('find /home/$USER -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} pull \;')
+        os.system('find $HOME -mindepth 1 -maxdepth 2 -type d -print -exec git -C {} pull \;')
     elif args.push:
         print(f'================= Push All Git Repos =============')
         os.system("git config --global credential.helper 'cache --timeout 7200'")

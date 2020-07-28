@@ -8,13 +8,17 @@ parser.add_argument('--html', help='Create an html file template')
 parser.add_argument('-p', '--python', help='Create a python file template')
 parser.add_argument('-c', '--cpro', help='Create a C programming template')
 parser.add_argument('-c++', '--cpp', help='Create a C++ program template')
-parser.add_argument('--open', action='store_true', help="Open file with vim after creating")
 parser.add_argument('-b', '--bash', help='Create a bash template')
+
+parser.add_argument('--open', action='store_true', help="Open file with vim after creating")
+parser.add_argument('-e', '--editor', help='Choose an editor to open with (e.g. vim, code, emacs, etc.)')
 args = parser.parse_args()
 
-def open_file(file, editor='vim'):
-    if args.open:
-        os.system(f'{editor} {file}')
+def open_file(file):
+    if args.open and args.editor:
+        os.system(f'{args.editor} {file}')
+    elif args.open and not args.editor:
+        os.system(f'vim {file}')
     else:
         return
 
