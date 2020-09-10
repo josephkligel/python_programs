@@ -3,6 +3,7 @@ import glob
 import json
 
 home_dir = f'{os.path.expandvars("$HOME")}/Github'
+
 def find_git(search_dir=home_dir):
     localRepoList = {}
     for file in glob.iglob(f'{search_dir}/**/.git', recursive=True):
