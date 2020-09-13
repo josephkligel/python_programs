@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os, glob
 
 def find_git(search_dir='/home/jkligel/Github'):

@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import webbrowser, sys, bs4, lxml, requests
 
 print('Searching...')
