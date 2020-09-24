@@ -108,5 +108,9 @@
     "React_course": {
         "file": "react_course.md",
         "default": "/home/jkligel/Github/Programmapedia/JSGuides/react_course.md"
+    },
+    "Androidref": {
+        "file": "androidRef.md",
+        "default": "/home/jkligel/Github/Programmapedia/androidRef.md"
     }
 }

@@ -18,6 +18,7 @@ git clone http://github.com/zigjag/c_programs.git
 git clone http://github.com/zigjag/node.git
 git clone http://github.com/zigjag/pythoncrud.git
 git clone http://github.com/zigjag/gamesjs.git
+git clone http://github.com/zigjag/android_programs.git
 git clone http://github.com/zigjag/calculatorjs.git
 git clone http://github.com/zigjag/electron.git
 git clone http://github.com/zigjag/wiki-api.git
