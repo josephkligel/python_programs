@@ -112,5 +112,9 @@
     "Androidref": {
         "file": "androidRef.md",
         "default": "/home/jkligel/Github/Programmapedia/androidRef.md"
+    },
+    "Javaref": {
+        "file": "javaref.md",
+        "default": "/home/jkligel/Github/Programmapedia/javaref.md"
     }
 }
