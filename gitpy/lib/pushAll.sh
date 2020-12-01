@@ -12,6 +12,7 @@ git clone http://github.com/zigjag/chat-app.git
 git clone http://github.com/zigjag/todolist.git
 git clone http://github.com/zigjag/python_programs.git
 git clone http://github.com/zigjag/bin.git
+git clone http://github.com/zigjag/practice_c.git
 git clone http://github.com/zigjag/blog.git
 git clone http://github.com/zigjag/vba.git
 git clone http://github.com/zigjag/c_programs.git
