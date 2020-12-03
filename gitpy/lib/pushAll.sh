@@ -10,6 +10,7 @@ git clone http://github.com/zigjag/newsletter-signup.git
 git clone http://github.com/zigjag/programmapedia.git
 git clone http://github.com/zigjag/wiki-api.git
 git clone http://github.com/zigjag/bin.git
+git clone http://github.com/zigjag/practice_c.git
 git clone http://github.com/zigjag/blog.git
 git clone http://github.com/zigjag/budgetcrud.git
 git clone http://github.com/zigjag/c_programs.git
