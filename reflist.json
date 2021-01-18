@@ -116,5 +116,9 @@
     "Javaref": {
         "file": "javaref.md",
         "default": "/home/jkligel/Github/Programmapedia/javaref.md"
+    },
+    "Numpy": {
+        "file": "numpy.md",
+        "default": "/home/jkligel/Github/Programmapedia/PyGuides/numpy.md"
     }
 }
