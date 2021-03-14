@@ -7,6 +7,7 @@ git clone http://github.com/zigjag/bitcoin-tracker.git
 git clone http://github.com/zigjag/practice_python.git
 git clone http://github.com/zigjag/head_first_projects.git
 git clone http://github.com/zigjag/securitynode.git
+git clone http://github.com/zigjag/practice_cpp.git
 git clone http://github.com/zigjag/learning_courses.git
 git clone http://github.com/zigjag/ai_py.git
 git clone http://github.com/zigjag/chat-app.git
