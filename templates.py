@@ -46,7 +46,7 @@ def main():
         with open(sys.argv[2] + '.c', 'w') as fh:
             fh.write("""#include <stdio.h>
 
-int main(int argc, int *argv[]){
+int main(int argc, char *argv[]){
 
 
 \treturn(0);
@@ -56,7 +56,7 @@ int main(int argc, int *argv[]){
             fh.write("""#include <iostream>
 using namespace std;
 
-int main(){
+int main(int argc, char **argv){
 
 
 \treturn 0;
