@@ -32,3 +32,5 @@ git clone http://github.com/zigjag/java-programs.git
 git clone http://github.com/zigjag/vba.git
 git clone http://github.com/zigjag/chat-app.git
 git clone http://github.com/zigjag/config.git
+git clone http://github.com/zigjag/learning_courses.git
+git clone http://github.com/zigjag/test.git
