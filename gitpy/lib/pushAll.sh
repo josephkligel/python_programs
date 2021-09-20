@@ -34,3 +34,5 @@ git clone http://github.com/zigjag/chat-app.git
 git clone http://github.com/zigjag/config.git
 git clone http://github.com/zigjag/learning_courses.git
 git clone http://github.com/zigjag/test.git
+git clone http://github.com/zigjag/playground.git
+git clone http://github.com/zigjag/powershell.git
