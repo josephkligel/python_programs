@@ -1,0 +1,9 @@
+import os
+import sys
+
+def cd(dirName):
+    os.chdir(dirName)
+
+if __name__ == '__main__':
+    cd(sys.argv[1])
+    print(os.getcwd())

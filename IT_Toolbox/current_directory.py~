@@ -1,0 +1,7 @@
+import os
+
+def pwd():
+    return os.getcwd()
+
+if __name__ == '__main__':
+    print(pwd())
