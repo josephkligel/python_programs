@@ -1,0 +1,30 @@
+import os
+from datetime import datetime
+import sys
+
+class File:
+    def __init__(self, fileStr):
+        self.variable = fileStr
+        self.exists()
+        self.path = os.path.abspath(fileStr)
+        self.size = str(os.path.getsize(self.path)) + " bytes"
+        self.lastModified = datetime.fromtimestamp(os.path.getmtime(self.path)).strftime("%m/%d/%Y %H:%M:%S")
+
+    def getAttributes(self):
+        print(self.variable)
+        print('------------------')
+        print(f"Full File Path: {self.path}")
+        print(f"Size: {self.size}")
+        print(f"Last Modified: {self.lastModified}")
+
+    def exists(self):
+        if os.path.exists(self.variable):
+            return
+        else:
+            open(x,'a').close()
+        
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        fObj = File(sys.argv[1])
+        fObj.getAttributes()

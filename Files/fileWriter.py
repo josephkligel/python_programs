@@ -1,0 +1,42 @@
+import sys
+import os
+from file import File
+
+class fileWriter:
+    def __init__(self, fileName):
+        self.fileObj = File(fileName)
+
+    def write(self, string):
+        with open(self.fileObj.path, 'a') as fw:
+            fw.write(string+'\n')
+
+    def writelines(self, string):
+        with open(self.fileObj.path, 'a') as fw:
+            strLst = list(string.split(','))
+            strLst = '\n'.join(strLst)
+            fw.write('\n')
+            fw.writelines(strLst)
+
+    def check(self):
+        with open(self.fileObj.path) as fr:
+            for line in fr:
+                print(line)
+
+if __name__ == '__main__':
+    argc = len(sys.argv)
+    args = sys.argv
+    if argc >= 3:
+        fileName = args[1]
+        fileStr = args[2]
+        options = args[3:]
+        fw = fileWriter(fileName)
+        if options:
+            if '--writelines' in options:
+                fw.writelines(fileStr)
+            else:
+                fw.write(fileStr)
+            if '--check' in options:
+                fw.check()
+        else:
+            fw.write(fileStr)
+

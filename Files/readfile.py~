@@ -1,0 +1,18 @@
+import sys
+from file import File
+
+class fileReader:
+    def __init__(self, fileStr):
+        self.fileObj = File(fileStr)
+
+    def read(self):
+        fr = open(self.fileObj.path, 'r')
+        for line in fr:
+            print(line)
+
+
+if __name__ == '__main__':
+    if len(sys.argv) == 2:
+        fr = fileReader(sys.argv[1])
+        fr.read()
+
