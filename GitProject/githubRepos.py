@@ -4,13 +4,13 @@ import sys
 import os
 
 class GithubRepos(Content):
-    def __init__(self, user='zigjag', token=os.getenv('token')):
+    def __init__(self, user='zigjag'):
         
         # Github api to get a list of all repos of a given user
         self.urlStr = f'https://api.github.com/users/{user}/repos'
         
         # Call parent init method to inherit its methods and attributes
-        headers = {'Authorization': f'token {token}'}
+        headers = {'Authorization': f'token {os.getenv("token")}'}
         super().__init__(self.urlStr, headers)
         
         # Get repo information

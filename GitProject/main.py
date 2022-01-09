@@ -1,16 +1,33 @@
 from githubRepos import GithubRepos
 from git import Git
+from find import find_files
 import sys
 import os
 
-def clone(urlStr):
-    git = Git(urlStr)
-    git.clone('./test')
+def get_local_repos(search_path='.'):
+    return find_files('.git', search_path)
+
+def cloneAll(destination='.'):
+    repos = GithubRepos()
+    for repoUrl in repos.repoUrls:
+        Git.clone(destination)
+
+def setToken(local_repos):
+    for repo in local_repos:
+        Git.setToken(repo)
+
+def pushAll(local_repos):
+    for repo in local_repos:
+        Git.push(repo)
+
+def pullAll(local_repos):
+    for repo in local_repos:
+        Git.pull(repo)
 
 def main():
-    repos = GithubRepos(token=sys.argv[1])
-    for r in repos.repoUrls:
-        clone(r)
+    pass
 
 if __name__ == '__main__':
-    main()
+    local_repos = get_local_repos('/home/jkligel/Github')
+    #setToken(local_repos)
+    pushAll(local_repos)
