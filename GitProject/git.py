@@ -10,10 +10,10 @@ class Git():
     
     @staticmethod
     def push(directory='.'):
-        addCmd = 'git -C {directory} add -A'
-        commitCmd = 'git -C {directory} commit -m "Using GitProject program to push"'
-        pushCmd = 'git -C {directory} push'
-        os.system(f'{addCmd}; {commitCmd}; {pushCmd}')
+        addCmd = f'git -C {directory} add -A;'
+        commitCmd = f'git -C {directory} commit -m "Using GitProject program to push";'
+        pushCmd = f'git -C {directory} push;'
+        os.system(f'{addCmd}{commitCmd}{pushCmd}')
 
     @staticmethod
     def pull(directory='.'):
@@ -21,9 +21,12 @@ class Git():
 
     @staticmethod
     def setToken(directory='.'):
-        command = f'git -C {directory} remote set-url origin '\
-        + os.getenv("token")\
-        + '@github.com/zigjag/'\
-        + os.path.basename(directory) + '.git'
+        command = f'git -C {directory} remote set-url'\
+                ' origin'\
+                ' https://'\
+                f'{os.getenv("token")}'\
+                '@github.com/zigjag/'\
+                f'{os.path.basename(directory)}'\
+                '.git'
         os.system(command)
         #print(command)

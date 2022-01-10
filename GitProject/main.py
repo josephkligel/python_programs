@@ -29,5 +29,5 @@ def main():
 
 if __name__ == '__main__':
     local_repos = get_local_repos('/home/jkligel/Github')
-    setToken(local_repos)
-    #pushAll(local_repos)
+    #setToken(local_repos)
+    pushAll(local_repos)
