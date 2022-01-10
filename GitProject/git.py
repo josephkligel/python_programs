@@ -21,4 +21,9 @@ class Git():
 
     @staticmethod
     def setToken(directory='.'):
-        os.system(f"git remote set-url origin {os.getenv('token')}@github.com/zigjag/{os.path.basename(directory)}.git")
+        command = f'git -C {directory} remote set-url origin '\
+        + os.getenv("token")\
+        + '@github.com/zigjag/'\
+        + os.path.basename(directory) + '.git'
+        os.system(command)
+        #print(command)

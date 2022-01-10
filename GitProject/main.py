@@ -1,11 +1,11 @@
 from githubRepos import GithubRepos
 from git import Git
-from find import find_files
+from find import find
 import sys
 import os
 
 def get_local_repos(search_path='.'):
-    return find_files('.git', search_path)
+    return find('.git', search_path)
 
 def cloneAll(destination='.'):
     repos = GithubRepos()
@@ -29,5 +29,5 @@ def main():
 
 if __name__ == '__main__':
     local_repos = get_local_repos('/home/jkligel/Github')
-    #setToken(local_repos)
-    pushAll(local_repos)
+    setToken(local_repos)
+    #pushAll(local_repos)
