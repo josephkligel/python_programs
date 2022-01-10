@@ -1,0 +1,14 @@
+https://github.com/zigjag/bash.git
+https://github.com/zigjag/cpp_programs.git
+https://github.com/zigjag/c_programs.git
+https://github.com/zigjag/GamesJS.git
+https://github.com/zigjag/learning_courses.git
+https://github.com/zigjag/Node.git
+https://github.com/zigjag/playground.git
+https://github.com/zigjag/PowerShell.git
+https://github.com/zigjag/Programmapedia.git
+https://github.com/zigjag/python_programs.git
+https://github.com/zigjag/resume.git
+https://github.com/zigjag/test_git.git
+https://github.com/zigjag/vba.git
+https://github.com/zigjag/websites.git

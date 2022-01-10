@@ -2,11 +2,12 @@ import os
 
 class Git():
     def __init__(url):
+        # No use yet
         self.gitUrl = url
     
     @staticmethod
-    def clone(directory='.'):
-        os.system(f'git -C {directory} clone {self.gitUrl}')
+    def clone(gitUrl, directory='.'):
+        os.system(f'git -C {directory} clone {gitUrl}')
     
     @staticmethod
     def push(directory='.'):
