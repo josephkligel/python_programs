@@ -3,7 +3,7 @@
 import GPUtil
 from tabulate import tabulate
 
-print("="*40, "GPU Details", "="*40)
+print("="*25, "GPU Details", "="*25)
 gpus = GPUtil.getGPUs()
 list_gpus = []
 for gpu in gpus:
