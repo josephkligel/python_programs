@@ -28,13 +28,14 @@ def main():
     pass
 
 if __name__ == '__main__':
-    local_repos = get_local_repos('/home/jkligel/Github')
+    local_repo_directory = '/home/jkligel/Github'
+    local_repos = get_local_repos(local_repo_directory)
     if len(sys.argv) >= 2:
         argument = sys.argv[1]
         if argument == 'set-token':
             setToken(local_repos)
         elif argument == 'clone':
-            cloneAll(local_repos)
+            cloneAll(local_repo_directory)
         elif argument == 'push':
             pushAll(local_repos)
         elif argument == 'pull':
