@@ -4,15 +4,16 @@ import sys
 import os
 from pathlib import Path
 
+# Class to scrape GitHub repos using Content class
 class GithubRepos(Content):
-    def __init__(self, user='zigjag'):
+    def __init__(self, user='josephkligel'):
         
         # Github api to get a list of all repos of a given user
         self.urlStr = f'https://api.github.com/users/{user}/repos'
         
         # Call parent init method to inherit its methods and attributes
-        headers = {'Authorization': f'token {os.getenv("token")}'}
-        super().__init__(self.urlStr, headers)
+        #headers = {'Authorization': f'token {os.getenv("token")}'}
+        super().__init__(self.urlStr)
         
         # Get repo information
         self.repoData = self.response.json()
@@ -34,6 +35,7 @@ class GithubRepos(Content):
             print('Writing repos to text file...')
             fw.writelines('\n'.join(self.repoUrls))
 
+# Call class a stand-alone script
 if __name__ == '__main__':
     repos = GithubRepos()
     repos.countRepos()
