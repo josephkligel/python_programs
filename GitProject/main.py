@@ -5,7 +5,7 @@ import sys
 import os
 
 # Global variables
-local_repo_directory = '/home/jkligel/GitHub'
+local_repo_directory = os.getenv('HOME')
 
 # Main functions called from options provided to this script
 
